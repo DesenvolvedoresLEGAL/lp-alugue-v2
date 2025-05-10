@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { WhatsappIcon } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const CTASection = () => {
   const handleScrollToForm = () => {
@@ -39,7 +39,7 @@ const CTASection = () => {
               variant="outline"
               className="border-white text-white hover:bg-white/10 text-lg py-6 px-8 flex items-center"
             >
-              <WhatsappIcon className="mr-2 h-5 w-5" />
+              <MessageCircle className="mr-2 h-5 w-5" />
               Falar no WhatsApp
             </Button>
           </div>

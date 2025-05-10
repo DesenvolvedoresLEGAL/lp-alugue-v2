@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { WhatsappIcon } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const MobileStickyCTA = () => {
   const isMobile = useIsMobile();
@@ -38,7 +38,7 @@ const MobileStickyCTA = () => {
         onClick={handleWhatsAppClick}
         className="bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-full w-full max-w-xs flex items-center justify-center font-bold text-lg"
       >
-        <WhatsappIcon className="mr-2 h-5 w-5" />
+        <MessageCircle className="mr-2 h-5 w-5" />
         Falar no WhatsApp Agora
       </button>
     </div>
