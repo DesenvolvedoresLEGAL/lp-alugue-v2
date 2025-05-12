@@ -65,7 +65,7 @@ const HeroSection = () => {
       <div className="container-custom relative z-20 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Internet para eventos, instalada em até 1 hora</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Internet para eventos, instalada em até 1h</h1>
             
             <p className="text-xl md:text-2xl">
               Velocidade 10× maior que a rede oficial do pavilhão, sem burocracia.
