@@ -163,7 +163,7 @@ const PricingTable = () => {
                   onClick={() => openDialog(plan.id)}
                   className={`w-full py-6 ${plan.isPopular ? 'bg-legal-purple hover:bg-legal-purple/90 text-white' : 'bg-legal-cyan hover:bg-legal-cyan/90 text-legal-blue'}`}
                 >
-                  Quero Cotar
+                  Alugar Agora
                 </Button>
               </div>
             </div>
