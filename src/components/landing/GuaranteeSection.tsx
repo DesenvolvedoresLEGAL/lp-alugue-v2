@@ -11,7 +11,7 @@ const GuaranteeSection = () => {
                 <h2 className="text-2xl md:text-3xl font-bold">Garantia LEGAL</h2>
               </div>
               
-              <p className="text-xl mb-6">Se sua internet ficar offline por mais de 30 minutos durante seu evento, devolvemos 100% do seu investimento.</p>
+              <p className="text-xl mb-6">Se sua internet ficar offline por mais de 30 minutos durante o seu evento, devolvemos 100% do seu investimento.*</p>
               
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">Por que podemos oferecer esta garantia?</h3>
