@@ -1,32 +1,19 @@
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-gray-900 text-white py-12">
+  return <footer className="bg-gray-900 text-white py-12">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">LEGAL</h3>
-            <p className="text-gray-400 mb-4">
-              Conectividade de alta performance para eventos de todos os portes.
-            </p>
-            <p className="text-gray-400 text-sm">
-              CNPJ: 00.000.000/0001-00
-            </p>
+            <p className="text-gray-400 mb-4">Conectividade e tecnologia de alta performance para eventos e negócios de todos os tamanhos.</p>
+            <p className="text-gray-400 text-sm">CNPJ: 54.753.156/0001-72</p>
           </div>
           
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <p className="text-gray-400 mb-2">
-              Email: contato@operadora.legal
-            </p>
-            <p className="text-gray-400 mb-2">
-              Telefone: (11) 3333-4444
-            </p>
-            <p className="text-gray-400">
-              WhatsApp: (11) 99999-9999
-            </p>
+            <p className="text-gray-400 mb-2">Email: sos@operadora.legal</p>
+            <p className="text-gray-400 mb-2">Telefone: (11) 5194-2223</p>
+            <p className="text-gray-400">WhatsApp: (11) 99957-2394</p>
           </div>
           
           <div>
@@ -49,8 +36,6 @@ const Footer = () => {
           <p>&copy; {currentYear} LEGAL. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
