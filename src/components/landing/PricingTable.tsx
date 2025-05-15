@@ -123,8 +123,8 @@ const PricingTable = () => {
             </div>)}
         </div>
         
-        <div className="text-center bg-amber-50 p-4 rounded-lg border border-amber-200 mt-8">
-          <p className="text-amber-800 font-bold">Agenda de junho 70% preenchida — garanta seu evento conectado antes que acabe!</p>
+        <div className="text-center p-4 rounded-lg border border-blue-200 mt-8 bg-blue-200">
+          <p className="font-bold text-[#020cbc]">Agenda de junho 70% preenchida — garanta seu evento conectado antes que acabe!</p>
         </div>
 
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
