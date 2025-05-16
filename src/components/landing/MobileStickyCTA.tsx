@@ -6,10 +6,10 @@ import { MessageCircle } from "lucide-react";
 const MobileStickyCTA = () => {
   const isMobile = useIsMobile();
   const [isVisible, setIsVisible] = useState(false);
+  const WHATSAPP_NUMBER = "5511999572394"; // Updated number
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show the sticky CTA after scrolling past the first 500px
       if (window.scrollY > 500) {
         setIsVisible(true);
       } else {
@@ -22,8 +22,8 @@ const MobileStickyCTA = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    // Replace with actual WhatsApp link
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.", "_blank");
+    // Kept existing message, only updated number
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.`, "_blank");
   };
 
   if (!isMobile) return null;

@@ -1,19 +1,35 @@
-import { WifiOff, Video, Clock } from "lucide-react";
+
+import { WifiOff, Video, AlertTriangle, DollarSign, Smile } from "lucide-react"; // Added AlertTriangle, DollarSign, Smile
+
 const ProblemSolution = () => {
-  const problems = [{
-    icon: WifiOff,
-    title: "Wi-Fi do pavilhão cai quando o público enche",
-    description: "Redes sobrecarregadas geram frustração, perda de leads e impactam diretamente seus resultados."
-  }, {
-    icon: Video,
-    title: "Streaming trava no meio da palestra",
-    description: "Apresentações interrompidas e transmissões de baixa qualidade prejudicam a experiência do seu evento."
-  }, {
-    icon: Clock,
-    title: "Suporte terceirizado demora horas",
-    description: "Sem acesso direto à equipe técnica, problemas simples viram grandes pesadelos."
-  }];
-  const solutions = ["FWA 5G dedicado com banda garantida", "Redundância automática em caso de falha", "Equipamentos profissionais Cambium/Ubiquiti", "Entrega plug-and-play, configurada e testada", "Monitoramento proativo em tempo real", "Suporte técnico especializado no local"];
+  const problems = [
+    {
+      icon: WifiOff,
+      title: "WiFi Cai Quando Enche o Evento",
+      description: "Redes sobrecarregadas geram frustração, perda de leads e impactam diretamente seus resultados."
+    },
+    {
+      icon: Video, // Using Video icon for streaming issues
+      title: "Streaming Trava no Meio da Palestra",
+      description: "Apresentações interrompidas e transmissões de baixa qualidade prejudicam a experiência do seu evento."
+    },
+    {
+      icon: DollarSign, // Using DollarSign for cost issues
+      title: "Custos Elevados e Pouco Retorno?",
+      description: "Tá cansado de pagar caro por algo que não dá retorno? A gente entende e resolve isso pra você!"
+    }
+  ];
+
+  const solutions = [
+    "FWA 5G dedicado com banda garantida",
+    "Redundância automática em caso de falha",
+    "Equipamentos de rede profissionais", // Updated
+    "Entrega plug-and-play, configurada e testada",
+    "Monitoramento proativo em tempo real",
+    "Suporte técnico especializado no local",
+    "Acesso direto à nossa equipe técnica especializada" // Added
+  ];
+
   return <div className="py-16 bg-gray-50">
       <div className="container-custom">
         {/* Problems Section */}

@@ -81,6 +81,11 @@ const PricingTable = () => {
     }));
     setDialogOpen(true);
   };
+  const WHATSAPP_NUMBER = "5511999572394";
+  const WHATSAPP_MESSAGE_PLAN = "Fala LEGAL, quero alugar agora!";
+  const handleWhatsAppRedirect = () => {
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE_PLAN)}`, "_blank");
+  };
   return <div className="py-16 bg-white">
       <div className="container-custom">
         <div className="text-center mb-12">
@@ -92,13 +97,13 @@ const PricingTable = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {plans.map(plan => <div key={plan.id} className={`rounded-lg overflow-hidden border ${plan.isPopular ? 'border-legal-purple shadow-lg shadow-legal-purple/20 relative' : 'border-gray-200'}`}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {plans.map(plan => <div key={plan.id} className={`rounded-lg overflow-hidden border flex flex-col ${plan.isPopular ? 'border-legal-purple shadow-lg shadow-legal-purple/20 relative' : 'border-gray-200'}`}>
               {plan.isPopular && <div className="bg-legal-purple text-white text-center py-2 font-bold">
                   Mais Popular
                 </div>}
               
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold mb-6">
@@ -107,7 +112,7 @@ const PricingTable = () => {
                   </div>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 flex-grow">
                   {plan.features.map((feature, index) => <li key={index} className="flex items-start">
                       <svg className="h-6 w-6 text-legal-purple mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -116,7 +121,7 @@ const PricingTable = () => {
                     </li>)}
                 </ul>
                 
-                <Button onClick={() => openDialog(plan.id)} className={`w-full py-6 ${plan.isPopular ? 'bg-legal-purple hover:bg-legal-purple/90 text-white' : 'bg-legal-cyan hover:bg-legal-cyan/90 text-legal-blue'}`}>
+                <Button onClick={() => openDialog(plan.id)} className={`w-full py-6 mt-auto ${plan.isPopular ? 'bg-legal-purple hover:bg-legal-purple/90 text-white' : 'bg-legal-cyan hover:bg-legal-cyan/90 text-legal-blue'}`}>
                   Alugar Agora
                 </Button>
               </div>
