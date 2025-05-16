@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon, CheckCircleIcon, Clock, MessageCircle } from "lucide-react";
-
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -13,10 +12,8 @@ const HeroSection = () => {
     dataEvento: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const WHATSAPP_NUMBER = "5511999572394";
   const WHATSAPP_MESSAGE_GENERAL = "Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.";
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       name,
@@ -27,7 +24,6 @@ const HeroSection = () => {
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -57,29 +53,19 @@ const HeroSection = () => {
       setIsSubmitting(false);
     }
   };
-
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE_GENERAL)}`, "_blank");
   };
-
   return <div className="relative min-h-[90vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-10"></div>
-        <img 
-          src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" 
-          alt="Smart city with 5G connectivity" 
-          className="w-full h-full object-cover"
-        />
+        <img src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" alt="Smart city with 5G connectivity" className="w-full h-full object-cover" />
       </div>
 
       <div className="container-custom relative z-20 py-12">
         <div className="text-center mb-8 md:mb-12">
-            <img 
-              src="/lovable-uploads/7b4e9169-3ee8-4cf6-aa15-170734bf6b6e.png" 
-              alt="LEGAL Logo" 
-              className="h-16 mx-auto" 
-            />
+            
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-white">
@@ -100,11 +86,7 @@ const HeroSection = () => {
                 <span>Suporte 24 × 7</span>
               </div>
               <div className="hidden sm:block w-px h-6 bg-white/30"></div>
-              <Button
-                variant="outline"
-                onClick={handleWhatsAppClick}
-                className="bg-transparent hover:bg-white/10 border-legal-cyan text-legal-cyan hover:text-white"
-              >
+              <Button variant="outline" onClick={handleWhatsAppClick} className="bg-transparent hover:bg-white/10 border-legal-cyan text-legal-cyan hover:text-white">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Fale Conosco
               </Button>
