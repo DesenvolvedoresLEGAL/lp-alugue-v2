@@ -8,32 +8,25 @@ const CustomerReviews = () => {
   const reviews = [
     {
       id: 1,
-      name: "João Carlos",
-      company: "Marketing Manager, Global Summit",
+      name: "Aniran Lucas da Silva",
+      company: "Compras, Fundação Gol de Letra",
       rating: 5,
-      text: "Contratamos a LEGAL para um evento com mais de 3.000 pessoas e foi impressionante a velocidade da internet mesmo com todos conectados. A instalação foi em menos de uma hora como prometido."
+      text: "Gostaria de registrar que tive uma experiência incrível com a Operadora Legal. Eles literalmente me salvaram no último minuto. O atendimento foi excelente do início ao fim, demonstrando muita eficiência e profissionalismo. O produto que aluguei era de excelente qualidade, e a equipe estava sempre de prontidão para atender minhas solicitações. As respostas via WhatsApp foram extremamente rápidas, o que facilitou muito todo o processo. Tive uma ótima experiência com o time, e quero agradecer a todos os envolvidos."
     },
     {
       id: 2,
-      name: "Ana Beatriz",
-      company: "CEO, Fashion Week SP",
+      name: "Júlia Paiola",
+      company: "Supervisora de Marketing, Bananinha Paraibuna",
       rating: 5,
-      text: "Já perdi as contas de quantas vezes a internet oficial do pavilhão nos deixou na mão. Com a LEGAL, nunca mais passamos por esse problema. Atendimento impecável e qualidade consistente."
+      text: "Já perdi as contas de quantas vezes a internet oficial do pavilhão nos deixou na mão. Depois que viramos parceiros da LEGAL, nunca mais passamos por esse problema. Atendimento de qualidade e impecável."
     },
     {
       id: 3,
-      name: "Ricardo Mendes",
-      company: "Diretor de TI, ExpoTech",
+      name: "Taís Ricomini",
+      company: "Gerente de Marketing, Shark Pro",
       rating: 5,
-      text: "O diferencial da LEGAL é que eles realmente entendem a criticidade da internet para eventos. O monitoramento em tempo real nos dá tranquilidade e o suporte técnico no local é imbatível."
+      text: "O diferencial da LEGAL é que eles realmente entendem a criticidade da internet para eventos. A qualidade da internet dentro do pavilhão nos dá tranquilidade e o suporte técnico no local é imbatível."
     },
-    {
-      id: 4,
-      name: "Camila Sousa",
-      company: "Organizadora, Congresso Médico",
-      rating: 5,
-      text: "Após três eventos com a LEGAL, só posso dizer: não existe comparação com outros provedores. A velocidade é muito superior e o suporte é instantâneo quando precisamos."
-    }
   ];
 
   useEffect(() => {
