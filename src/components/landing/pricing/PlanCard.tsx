@@ -9,6 +9,8 @@ interface PlanCardProps {
 }
 
 const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
+  const whatsappLink = `https://wa.me/5511999572394?text=Fala%20LEGAL%2C%20quero%20alugar%20agora!`;
+  
   return (
     <div 
       className={`rounded-lg overflow-hidden border flex flex-col transition-all duration-200 hover:border-[#040dbe] bg-white ${
@@ -29,12 +31,18 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
           </div>
         </div>
         
-        <Button 
-          onClick={() => onSelectPlan(plan.id)} 
-          className="w-full py-6 mb-6 bg-[#040dbe] hover:bg-[#040dbe]/90 text-white transition-all duration-300 font-bold uppercase"
+        <a 
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block w-full"
         >
-          Alugar Agora
-        </Button>
+          <Button 
+            className="w-full py-6 mb-6 bg-[#040dbe] hover:bg-[#040dbe]/90 text-white transition-all duration-300 font-bold uppercase"
+          >
+            Alugar Agora
+          </Button>
+        </a>
         
         <ul className="space-y-3 text-xs">
           {plan.features.map((feature, index) => (
