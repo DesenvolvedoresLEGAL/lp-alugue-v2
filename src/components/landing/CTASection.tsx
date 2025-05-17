@@ -12,7 +12,7 @@ const CTASection = () => {
 
   const handleWhatsAppClick = () => {
     // Replace with actual WhatsApp link
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.", "_blank");
+    window.open("https://wa.me/5511999572394?text=Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.", "_blank");
   };
 
   return (

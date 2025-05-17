@@ -100,7 +100,7 @@ const HeroSection = () => {
               <div className="hidden sm:block w-px h-6 bg-white/30"></div>
               <Button variant="outline" onClick={handleWhatsAppClick} className="bg-transparent hover:bg-white/10 border-legal-cyan text-legal-cyan hover:text-white">
                 <MessageCircle className="mr-2 h-5 w-5" />
-                Fale Conosco
+                Alugue Agora
               </Button>
             </div>
           </div>
