@@ -16,7 +16,7 @@ const ProblemSolution = () => {
     {
       icon: DollarSign, // Using DollarSign for cost issues
       title: "Valores abusivos e fora da realidade",
-      description: "Tá cansado de pagar caro por algo que não dá retorno? A gente entende e resolve isso pra você!"
+      description: "Ta cansado de pagar caro por algo que não te dá retorno? A gente entende e resolve isso pra você!"
     }
   ];
 
