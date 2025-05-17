@@ -154,7 +154,7 @@ const PricingTable = () => {
               }`}
             >
               {plan.isPopular && (
-                <div className="bg-legal-purple text-white text-center py-2 font-bold">
+                <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight">
                   Mais Popular
                 </div>
               )}
@@ -163,31 +163,31 @@ const PricingTable = () => {
                 <h3 className="text-xl font-bold">{plan.name}</h3>
               </div>
               
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col flex-grow bg-[#e5e7eb]">
                 <div className="text-center mb-6">
-                  <div className="bg-black text-white py-3 px-4 rounded-md inline-block">
-                    <span className="text-4xl font-extrabold">
+                  <div className="bg-white text-black py-2 px-4 rounded-md inline-block">
+                    <span className="text-3xl font-extrabold truncate">
                       {plan.price}
-                      <span className="text-base font-normal ml-1">/dia</span>
+                      <span className="text-sm font-normal ml-1">/dia</span>
                     </span>
                   </div>
                 </div>
                 
-                <ul className="space-y-4 mb-8 flex-grow">
+                <Button 
+                  onClick={() => openDialog(plan.id)} 
+                  className="w-full py-6 mb-6 bg-gradient-to-r from-legal-blue to-legal-purple hover:from-legal-purple hover:to-legal-blue text-white transition-all duration-300"
+                >
+                  Alugar Agora
+                </Button>
+                
+                <ul className="space-y-3 text-sm">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <feature.icon className="h-5 w-5 text-legal-purple mr-2 flex-shrink-0 mt-0.5" />
+                      <feature.icon className="h-4 w-4 text-legal-purple mr-2 flex-shrink-0 mt-0.5" />
                       <span>{feature.text}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
-                  onClick={() => openDialog(plan.id)} 
-                  className={`w-full py-6 mt-auto bg-gradient-to-r from-legal-blue to-legal-purple hover:from-legal-purple hover:to-legal-blue text-white transition-all duration-300`}
-                >
-                  Alugar Agora
-                </Button>
               </div>
             </div>
           ))}
