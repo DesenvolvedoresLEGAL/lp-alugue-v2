@@ -11,7 +11,7 @@ export const plans: Plan[] = [
       { text: "Até 3 conexões simultâneas", icon: Users },
       { text: "5GB/dia de consumo", icon: Database },
       { text: "1 roteador Wi-Fi6 grátis", icon: Wifi },
-      { text: "Suporte técnico presencial não incluso", icon: X },
+      { text: "Suporte técnico remoto 24/7", icon: X },
       { text: "Média de velocidade dentro do pavilhão: 100 a 200 megas", icon: Zap },
       { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
     ],
@@ -25,7 +25,7 @@ export const plans: Plan[] = [
       { text: "Até 10 conexões simultâneas", icon: Users },
       { text: "10GB/dia de consumo", icon: Database },
       { text: "1 roteador Wi-Fi6 grátis", icon: Wifi },
-      { text: "Suporte técnico presencial não incluso", icon: X },
+      { text: "Suporte técnico remoto 24/7", icon: X },
       { text: "Média de velocidade dentro do pavilhão: 100 a 200 megas", icon: Zap },
       { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
     ],
@@ -40,7 +40,7 @@ export const plans: Plan[] = [
       { text: "50GB/dia de consumo", icon: Database },
       { text: "2 roteadores Wi-Fi6 grátis", icon: Wifi },
       { text: "Roteadores adicionais R$ 100,00/dia", icon: Wifi },
-      { text: "Suporte técnico incluso 24/7", icon: Headphones },
+      { text: "Suporte técnico remoto 24/7", icon: Headphones },
       { text: "Dashboard de monitoramento", icon: Monitor },
       { text: "Média de velocidade dentro do pavilhão: 100 a 200 megas", icon: Zap },
       { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
@@ -60,11 +60,11 @@ export const plans: Plan[] = [
       { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
       { text: "Suporte técnico presencial 24/7 prioritário", icon: Headphones },
       { text: "Redundância de Links", icon: HardDrive },
-      { text: "Coleta de leads", icon: Mic },
+      { text: "Dashboard de monitoramento + Coleta de leads", icon: Mic },
     ],
     isPopular: false
   }
 ];
 
 export const WHATSAPP_NUMBER = "5511999572394";
-export const WHATSAPP_MESSAGE_PLAN = "Fala LEGAL, quero alugar agora!";
+export const WHATSAPP_MESSAGE_PLAN = "LEGAL, quero alugar agora!";
