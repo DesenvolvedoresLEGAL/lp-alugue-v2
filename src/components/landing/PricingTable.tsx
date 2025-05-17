@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { toast } from "@/components/ui/sonner";
 import PlanCard from "./pricing/PlanCard";
@@ -76,16 +75,7 @@ const PricingTable = () => {
           </p>
         </div>
 
-        <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Popular tag positioned specifically above PRO plan */}
-          {plans.map(plan => plan.isPopular && (
-            <div key={`tag-${plan.id}`} className="absolute top-0 lg:left-[50%] md:left-[75%] lg:-translate-x-1/2 md:-translate-x-1/2 -translate-y-3 z-10 w-36 mx-auto">
-              <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg">
-                Mais Popular
-              </div>
-            </div>
-          ))}
-          
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {plans.map(plan => (
             <PlanCard 
               key={plan.id} 

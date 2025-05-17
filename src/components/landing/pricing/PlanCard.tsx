@@ -16,7 +16,13 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
       className={`rounded-lg overflow-hidden border flex flex-col transition-all duration-200 hover:border-[#040dbe] bg-white ${
         plan.isPopular ? 'border-[#040dbe] shadow-lg shadow-[#040dbe]/20' : 'border-gray-200'
       }`}
-    >              
+    >
+      {plan.isPopular && (
+        <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg">
+          Mais Popular
+        </div>
+      )}
+              
       <div className="bg-[#040dbe] text-white p-4 text-center">
         <h3 className="text-xl font-bold">{plan.name}</h3>
       </div>
