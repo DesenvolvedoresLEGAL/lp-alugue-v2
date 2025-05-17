@@ -134,7 +134,7 @@ const PricingTable = () => {
   const handleWhatsAppRedirect = () => {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE_PLAN)}`, "_blank");
   };
-  return <div className="py-16 bg-white">
+  return <div className="py-16 bg-transparent">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -145,21 +145,24 @@ const PricingTable = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Popular tag positioned outside of normal flow */}
+          {plans.map(plan => plan.isPopular && (
+            <div key={`tag-${plan.id}`} className="absolute top-0 lg:left-1/2 md:left-3/4 lg:-translate-x-1/2 md:-translate-x-1/2 -translate-y-6 z-10 w-40 mx-auto">
+              <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight">
+                Mais Popular
+              </div>
+            </div>
+          ))}
+          
           {plans.map(plan => (
             <div 
               key={plan.id} 
-              className={`rounded-lg overflow-hidden border flex flex-col ${
-                plan.isPopular ? 'border-legal-purple shadow-lg shadow-legal-purple/20 relative' : 'border-gray-200'
+              className={`rounded-lg overflow-hidden border flex flex-col transition-all duration-200 hover:border-[#040dbe] ${
+                plan.isPopular ? 'border-[#040dbe] shadow-lg shadow-[#040dbe]/20' : 'border-gray-200'
               }`}
-            >
-              {plan.isPopular && (
-                <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight">
-                  Mais Popular
-                </div>
-              )}
-              
-              <div className="bg-gradient-to-r from-legal-blue to-legal-purple text-white p-4 text-center">
+            >              
+              <div className="bg-gradient-to-r from-[#040dbe] to-legal-purple text-white p-4 text-center">
                 <h3 className="text-xl font-bold">{plan.name}</h3>
               </div>
               
@@ -175,7 +178,7 @@ const PricingTable = () => {
                 
                 <Button 
                   onClick={() => openDialog(plan.id)} 
-                  className="w-full py-6 mb-6 bg-gradient-to-r from-legal-blue to-legal-purple hover:from-legal-purple hover:to-legal-blue text-white transition-all duration-300"
+                  className="w-full py-6 mb-6 bg-gradient-to-r from-[#040dbe] to-legal-purple hover:from-legal-purple hover:to-[#040dbe] text-white transition-all duration-300 font-bold uppercase"
                 >
                   Alugar Agora
                 </Button>
@@ -183,7 +186,7 @@ const PricingTable = () => {
                 <ul className="space-y-3 text-sm">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <feature.icon className="h-4 w-4 text-legal-purple mr-2 flex-shrink-0 mt-0.5" />
+                      <feature.icon className="h-4 w-4 text-[#040dbe] mr-2 flex-shrink-0 mt-0.5" />
                       <span>{feature.text}</span>
                     </li>
                   ))}
