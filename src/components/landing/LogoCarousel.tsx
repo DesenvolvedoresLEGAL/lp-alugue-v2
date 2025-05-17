@@ -27,7 +27,7 @@ const LogoCarousel = () => {
   return (
     <div className="bg-white py-12">
       <div className="container-custom">
-        <h3 className="text-center text-xl md:text-2xl font-bold text-gray-800 mb-8">+2.000 eventos já confiam</h3>
+        <h3 className="text-center text-xl md:text-2xl font-bold text-gray-800 mb-8">Grandes eventos já confiam</h3>
 
         <div className="overflow-hidden relative">
           <div className="flex animate-carousel">
