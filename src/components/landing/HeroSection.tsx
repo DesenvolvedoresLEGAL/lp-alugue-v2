@@ -65,6 +65,15 @@ const HeroSection = () => {
         <img src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" alt="Smart city with 5G connectivity" className="w-full h-full object-cover" />
       </div>
 
+      {/* Company Logo at the top */}
+      <div className="absolute top-6 left-0 right-0 z-30 flex justify-center">
+        <img 
+          src="https://alugue.operadora.legal/wp-content/webp-express/webp-images/uploads/2023/06/Logo-Alugue-Branco.png.webp" 
+          alt="LEGAL - Internet 5G para eventos" 
+          className="max-w-[165px] h-auto" // reduced by 25% from 220px to 165px
+        />
+      </div>
+
       <div className="container-custom relative z-20 py-12">
         <div className="text-center mb-8 md:mb-12">
             
@@ -76,7 +85,7 @@ const HeroSection = () => {
               <img 
                 src="https://alugue.operadora.legal/wp-content/webp-express/webp-images/uploads/2023/06/Logo-Alugue-Branco.png.webp" 
                 alt="LEGAL - Internet 5G para eventos" 
-                className="max-w-[220px] h-auto"
+                className="max-w-[165px] h-auto" // reduced by 25% from 220px to 165px
               />
             </div>
             
