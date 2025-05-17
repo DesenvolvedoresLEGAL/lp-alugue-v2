@@ -17,15 +17,15 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
         plan.isPopular ? 'border-[#040dbe] shadow-lg shadow-[#040dbe]/20' : 'border-gray-200'
       }`}
     >
-      {plan.isPopular ? (
+      {plan.isPopular && (
         <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg">
           Mais Popular
         </div>
-      ) : (
-        <div className="h-[22px]"></div> // Empty div with same height as the "Mais Popular" tag
       )}
               
-      <div className="bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center">
+      <div className={`bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center ${
+        !plan.isPopular ? 'rounded-t-lg' : ''
+      }`}>
         <h3 className="text-xl font-bold">{plan.name}</h3>
       </div>
       
@@ -34,7 +34,7 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
           <div className="bg-white text-black py-2 px-4 rounded-md inline-block">
             <span className="text-3xl font-extrabold tracking-tighter text-[39px]">
               {plan.price}
-              <span className="text-sm font-normal ml-2 tracking-widest">/dia</span>
+              <span className="text-sm font-normal ml-2 tracking-[0.2em]">/dia</span>
             </span>
           </div>
         </div>
