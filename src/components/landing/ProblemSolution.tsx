@@ -21,13 +21,14 @@ const ProblemSolution = () => {
   ];
 
   const solutions = [
-    "FWA 5G dedicado com banda garantida",
+    "FWA 5G dedicado com QoS garantido",
     "Redundância automática em caso de falha",
-    "Equipamentos de rede profissionais", // Updated
-    "Entrega plug-and-play, configurada e testada",
+    "Equipamentos profissionais e atualizados", // Updated
+    "Solução Plug & Play, configurada e testada",
     "Monitoramento proativo em tempo real",
     "Suporte técnico especializado no local",
-    "Acesso direto à nossa equipe técnica especializada" // Added
+    "11 anos de experiência e pioneirismo",
+    "Soluções sob medida para cada projeto" // Added
   ];
 
   return <div className="py-16 bg-gray-50">

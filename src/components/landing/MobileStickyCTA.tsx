@@ -23,7 +23,7 @@ const MobileStickyCTA = () => {
 
   const handleWhatsAppClick = () => {
     // Kept existing message, only updated number
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.`, "_blank");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=LEGAL, quero alugar agora.`, "_blank");
   };
 
   if (!isMobile) return null;
