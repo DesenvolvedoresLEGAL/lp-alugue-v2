@@ -159,12 +159,17 @@ const PricingTable = () => {
                 </div>
               )}
               
+              <div className="bg-gradient-to-r from-legal-blue to-legal-purple text-white p-4 text-center">
+                <h3 className="text-xl font-bold">{plan.name}</h3>
+              </div>
+              
               <div className="p-6 flex flex-col flex-grow">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold mb-6">
-                    {plan.price}
-                    <span className="text-base text-gray-500 font-normal">/dia</span>
+                <div className="text-center mb-6">
+                  <div className="bg-black text-white py-3 px-4 rounded-md inline-block">
+                    <span className="text-4xl font-extrabold">
+                      {plan.price}
+                      <span className="text-base font-normal ml-1">/dia</span>
+                    </span>
                   </div>
                 </div>
                 
@@ -179,11 +184,7 @@ const PricingTable = () => {
                 
                 <Button 
                   onClick={() => openDialog(plan.id)} 
-                  className={`w-full py-6 mt-auto ${
-                    plan.isPopular 
-                      ? 'bg-legal-purple hover:bg-legal-purple/90 text-white' 
-                      : 'bg-legal-cyan hover:bg-legal-cyan/90 text-legal-blue'
-                  }`}
+                  className={`w-full py-6 mt-auto bg-gradient-to-r from-legal-blue to-legal-purple hover:from-legal-purple hover:to-legal-blue text-white transition-all duration-300`}
                 >
                   Alugar Agora
                 </Button>
