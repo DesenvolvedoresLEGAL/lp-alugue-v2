@@ -17,10 +17,12 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
         plan.isPopular ? 'border-[#040dbe] shadow-lg shadow-[#040dbe]/20' : 'border-gray-200'
       }`}
     >
-      {plan.isPopular && (
+      {plan.isPopular ? (
         <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg">
           Mais Popular
         </div>
+      ) : (
+        <div className="h-[22px]"></div> // Empty div with same height as the "Mais Popular" tag
       )}
               
       <div className="bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center">
