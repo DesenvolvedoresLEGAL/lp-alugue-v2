@@ -4,6 +4,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/sonner";
+import { Wifi, Users, Database, HardDrive, Monitor, Headphones, Mic, Zap, Check, X } from "lucide-react";
+
 const PricingTable = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -14,25 +16,71 @@ const PricingTable = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
-  const plans = [{
-    id: "diaria",
-    name: "Diária",
-    price: "R$ 1.499",
-    features: ["Até 200 conexões simultâneas", "Instalação em 60 minutos", "1 Access Point profissional", "Suporte técnico 24/7"],
-    isPopular: false
-  }, {
-    id: "semana",
-    name: "Semana",
-    price: "R$ 5.990",
-    features: ["Até 500 conexões simultâneas", "Instalação em 60 minutos", "2 Access Points profissionais", "Redundância 4G automática", "Suporte técnico 24/7", "Dashboard de monitoramento"],
-    isPopular: true
-  }, {
-    id: "mes",
-    name: "Mês",
-    price: "R$ 14.990",
-    features: ["Até 1000 conexões simultâneas", "Instalação em 60 minutos", "4 Access Points profissionais", "Redundância 4G automática", "Suporte técnico 24/7", "Dashboard de monitoramento", "Técnico exclusivo no local"],
-    isPopular: false
-  }];
+
+  const plans = [
+    {
+      id: "lite",
+      name: "SPEEDY 5G LITE",
+      price: "R$ 200,00",
+      features: [
+        { text: "Até 3 conexões simultâneas", icon: Users },
+        { text: "5GB/dia de consumo", icon: Database },
+        { text: "1 roteador Wi-Fi6 grátis", icon: Wifi },
+        { text: "Suporte técnico presencial não incluso", icon: X },
+        { text: "Média de velocidade dentro do pavilhão: 100 a 200 megas", icon: Zap },
+        { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
+      ],
+      isPopular: false
+    },
+    {
+      id: "plus",
+      name: "SPEEDY 5G PLUS",
+      price: "R$ 400,00",
+      features: [
+        { text: "Até 10 conexões simultâneas", icon: Users },
+        { text: "10GB/dia de consumo", icon: Database },
+        { text: "1 roteador Wi-Fi6 grátis", icon: Wifi },
+        { text: "Suporte técnico presencial não incluso", icon: X },
+        { text: "Média de velocidade dentro do pavilhão: 100 a 200 megas", icon: Zap },
+        { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
+      ],
+      isPopular: false
+    },
+    {
+      id: "pro",
+      name: "SPEEDY 5G PRO",
+      price: "R$ 800,00",
+      features: [
+        { text: "Até 50 conexões simultâneas", icon: Users },
+        { text: "50GB/dia de consumo", icon: Database },
+        { text: "2 roteadores Wi-Fi6 grátis", icon: Wifi },
+        { text: "Roteadores adicionais R$ 100,00/dia", icon: Wifi },
+        { text: "Suporte técnico incluso 24/7", icon: Headphones },
+        { text: "Dashboard de monitoramento", icon: Monitor },
+        { text: "Média de velocidade dentro do pavilhão: 100 a 200 megas", icon: Zap },
+        { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
+      ],
+      isPopular: true
+    },
+    {
+      id: "ultra",
+      name: "SPEEDY 5G ULTRA",
+      price: "R$ 2.000,00",
+      features: [
+        { text: "Até 100 conexões simultâneas", icon: Users },
+        { text: "100GB/dia de consumo", icon: Database },
+        { text: "5 roteadores Wi-Fi6 grátis", icon: Wifi },
+        { text: "Roteadores adicionais R$ 100,00/dia", icon: Wifi },
+        { text: "Média de velocidade dentro do pavilhão: 100 a 200 megas", icon: Zap },
+        { text: "Média de velocidade fora do pavilhão: 400 a 500 megas", icon: Zap },
+        { text: "Suporte técnico presencial 24/7 prioritário", icon: Headphones },
+        { text: "Redundância de Links", icon: HardDrive },
+        { text: "Coleta de leads", icon: Mic },
+      ],
+      isPopular: false
+    }
+  ];
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       name,
@@ -98,34 +146,69 @@ const PricingTable = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {plans.map(plan => <div key={plan.id} className={`rounded-lg overflow-hidden border flex flex-col ${plan.isPopular ? 'border-legal-purple shadow-lg shadow-legal-purple/20 relative' : 'border-gray-200'}`}>
-              {plan.isPopular && <div className="bg-legal-purple text-white text-center py-2 font-bold">
+          {plans.map(plan => (
+            <div 
+              key={plan.id} 
+              className={`rounded-lg overflow-hidden border flex flex-col ${
+                plan.isPopular ? 'border-legal-purple shadow-lg shadow-legal-purple/20 relative' : 'border-gray-200'
+              }`}
+            >
+              {plan.isPopular && (
+                <div className="bg-legal-purple text-white text-center py-2 font-bold">
                   Mais Popular
-                </div>}
+                </div>
+              )}
               
               <div className="p-6 flex flex-col flex-grow">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold mb-6">
                     {plan.price}
-                    <span className="text-base text-gray-500 font-normal"> /período</span>
+                    <span className="text-base text-gray-500 font-normal">/dia</span>
                   </div>
                 </div>
                 
                 <ul className="space-y-4 mb-8 flex-grow">
-                  {plan.features.map((feature, index) => <li key={index} className="flex items-start">
-                      <svg className="h-6 w-6 text-legal-purple mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>{feature}</span>
-                    </li>)}
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <feature.icon className="h-5 w-5 text-legal-purple mr-2 flex-shrink-0 mt-0.5" />
+                      <span>{feature.text}</span>
+                    </li>
+                  ))}
                 </ul>
                 
-                <Button onClick={() => openDialog(plan.id)} className={`w-full py-6 mt-auto ${plan.isPopular ? 'bg-legal-purple hover:bg-legal-purple/90 text-white' : 'bg-legal-cyan hover:bg-legal-cyan/90 text-legal-blue'}`}>
+                <Button 
+                  onClick={() => openDialog(plan.id)} 
+                  className={`w-full py-6 mt-auto ${
+                    plan.isPopular 
+                      ? 'bg-legal-purple hover:bg-legal-purple/90 text-white' 
+                      : 'bg-legal-cyan hover:bg-legal-cyan/90 text-legal-blue'
+                  }`}
+                >
                   Alugar Agora
                 </Button>
               </div>
-            </div>)}
+            </div>
+          ))}
+        </div>
+        
+        <div className="text-center my-8">
+          <Button 
+            onClick={handleWhatsAppRedirect} 
+            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 mx-auto"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="white" 
+              className="w-5 h-5"
+            >
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Fala LEGAL, quero alugar agora!
+          </Button>
         </div>
         
         <div className="text-center p-4 rounded-lg border border-blue-200 mt-8 bg-blue-200">
@@ -170,4 +253,5 @@ const PricingTable = () => {
       </div>
     </div>;
 };
+
 export default PricingTable;
