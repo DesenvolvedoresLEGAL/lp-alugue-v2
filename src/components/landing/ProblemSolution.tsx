@@ -5,7 +5,7 @@ const ProblemSolution = () => {
   const problems = [
     {
       icon: WifiOff,
-      title: "WiFi Cai Quando Enche o Evento",
+      title: "WiFi cai quando enche o evento",
       description: "Redes sobrecarregadas geram frustração, perda de leads e impactam diretamente seus resultados."
     },
     {
