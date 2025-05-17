@@ -171,7 +171,7 @@ const PricingTable = () => {
                   <div className="bg-white text-black py-2 px-4 rounded-md inline-block">
                     <span className="text-3xl font-extrabold tracking-tighter text-[39px]">
                       {plan.price}
-                      <span className="text-sm font-normal ml-1">/dia</span>
+                      <span className="text-sm font-normal ml-2">/dia</span>
                     </span>
                   </div>
                 </div>
