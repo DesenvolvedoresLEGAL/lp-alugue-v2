@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon, CheckCircleIcon, Clock, MessageCircle } from "lucide-react";
-
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -82,7 +81,7 @@ const HeroSection = () => {
               
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Internet 5G para Eventos, Instalada em até 60 min</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Internet 5G para eventos, instalada em até 60 min</h1>
             
             <p className="text-xl md:text-2xl">
               Velocidade 10× maior que a rede oficial do pavilhão, sem burocracia.
@@ -144,5 +143,4 @@ const HeroSection = () => {
       </div>
     </div>;
 };
-
 export default HeroSection;
