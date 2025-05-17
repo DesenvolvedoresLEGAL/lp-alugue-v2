@@ -32,12 +32,12 @@ const LogoCarousel = () => {
         <div className="overflow-hidden relative">
           <div className="flex animate-carousel">
             {clientLogos.map((client, index) => (
-              <div key={`logo-set1-${index}`} className="min-w-[150px] md:min-w-[180px] px-8 flex items-center justify-center">
+              <div key={`logo-set1-${index}`} className="min-w-[187px] md:min-w-[225px] px-8 flex items-center justify-center">
                 <img 
                   src={client.logo} 
                   alt={`Logo ${client.name}`} 
                   title={client.name} 
-                  className="max-h-16 grayscale hover:grayscale-0 transition-all duration-300" 
+                  className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300" 
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                     console.log(`Failed to load logo for ${client.name}, using placeholder`);
@@ -47,12 +47,12 @@ const LogoCarousel = () => {
             ))}
             {/* Duplicate set of logos for infinite scroll effect - ensuring enough items for a smooth loop */}
             {clientLogos.map((client, index) => (
-              <div key={`logo-set2-${index}`} className="min-w-[150px] md:min-w-[180px] px-8 flex items-center justify-center">
+              <div key={`logo-set2-${index}`} className="min-w-[187px] md:min-w-[225px] px-8 flex items-center justify-center">
                 <img 
                   src={client.logo} 
                   alt={`Logo ${client.name}`} 
                   title={client.name} 
-                  className="max-h-16 grayscale hover:grayscale-0 transition-all duration-300" 
+                  className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300" 
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                     console.log(`Failed to load logo for ${client.name}, using placeholder`);
