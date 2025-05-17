@@ -11,7 +11,7 @@ const CustomerReviews = () => {
       name: "Aniran Lucas da Silva",
       company: "Compras, Fundação Gol de Letra",
       rating: 5,
-      text: "Gostaria de registrar que tive uma experiência incrível com a Operadora Legal. Eles literalmente me salvaram no último minuto. O atendimento foi excelente do início ao fim, demonstrando muita eficiência e profissionalismo. O produto que aluguei era de excelente qualidade, e a equipe estava sempre de prontidão para atender minhas solicitações. As respostas via WhatsApp foram extremamente rápidas, o que facilitou muito todo o processo. Tive uma ótima experiência com o time, e quero agradecer a todos os envolvidos."
+      text: "Eles literalmente me salvaram no último minuto. O atendimento foi excelente do início ao fim, demonstrando muita eficiência e profissionalismo. O produto que aluguei era de excelente qualidade, e a equipe estava sempre de prontidão para atender minhas solicitações. As respostas via WhatsApp foram extremamente rápidas, o que facilitou muito todo o processo."
     },
     {
       id: 2,
