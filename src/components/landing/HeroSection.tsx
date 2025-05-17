@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon, CheckCircleIcon, Clock, MessageCircle } from "lucide-react";
+
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -64,9 +65,10 @@ const HeroSection = () => {
       </div>
 
       {/* Company Logo at the top */}
-      <div className="absolute top-6 left-0 right-0 z-30 flex justify-center">
-        <img src="https://alugue.operadora.legal/wp-content/webp-express/webp-images/uploads/2023/06/Logo-Alugue-Branco.png.webp" alt="LEGAL - Internet 5G para eventos" className="max-w-[165px] h-auto" // reduced by 25% from 220px to 165px
-      />
+      <div className="absolute top-6 left-0 right-0 z-30 container-custom">
+        <div className="flex justify-start">
+          <img src="https://alugue.operadora.legal/wp-content/webp-express/webp-images/uploads/2023/06/Logo-Alugue-Branco.png.webp" alt="LEGAL - Internet 5G para eventos" className="max-w-[165px] h-auto" />
+        </div>
       </div>
 
       <div className="container-custom relative z-20 py-12">
@@ -142,4 +144,5 @@ const HeroSection = () => {
       </div>
     </div>;
 };
+
 export default HeroSection;
