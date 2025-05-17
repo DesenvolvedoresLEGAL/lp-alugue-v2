@@ -15,7 +15,7 @@ const ProblemSolution = () => {
     },
     {
       icon: DollarSign, // Using DollarSign for cost issues
-      title: "Custos Elevados e Pouco Retorno?",
+      title: "Valores abusivos e fora da realidade",
       description: "Tá cansado de pagar caro por algo que não dá retorno? A gente entende e resolve isso pra você!"
     }
   ];
