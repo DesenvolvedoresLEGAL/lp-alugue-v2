@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon, CheckCircleIcon, Clock, MessageCircle } from "lucide-react";
+
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -14,6 +15,7 @@ const HeroSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const WHATSAPP_NUMBER = "5511999572394";
   const WHATSAPP_MESSAGE_GENERAL = "Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.";
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       name,
@@ -69,6 +71,15 @@ const HeroSection = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-white">
+            {/* Company Logo */}
+            <div className="mb-6">
+              <img 
+                src="https://alugue.operadora.legal/wp-content/webp-express/webp-images/uploads/2023/06/Logo-Alugue-Branco.png.webp" 
+                alt="LEGAL - Internet 5G para eventos" 
+                className="max-w-[220px] h-auto"
+              />
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Internet 5G para Eventos, Instalada em até 60 min</h1>
             
             <p className="text-xl md:text-2xl">
