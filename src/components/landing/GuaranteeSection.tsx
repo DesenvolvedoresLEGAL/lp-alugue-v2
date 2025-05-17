@@ -1,6 +1,6 @@
 import { ShieldCheck } from "lucide-react";
 const GuaranteeSection = () => {
-  const benefits = ["Suporte técnico 24/7 em português", "Redundância automática com 4G em caso de falha", "Equipamentos profissionais próprios (não alugados)", "Monitoramento em tempo real da rede", "Técnico dedicado para eventos maiores", "Dashboard com métricas de uso e performance"];
+  const benefits = ["Suporte técnico 24/7 em português", "Redundância automática com 4G em caso de falha", "Equipamentos profissionais próprios (não alugados)", "Monitoramento em tempo real da rede", "Técnico dedicado para eventos maiores", "Dashboard com métricas de uso e performance", "Aumentamos a quantidade de leads geradas e a receita"];
   return <div className="py-16 bg-white">
       <div className="container-custom">
         <div className="bg-gradient-to-br from-legal-purple to-legal-blue text-white rounded-lg shadow-xl overflow-hidden">
