@@ -3,25 +3,25 @@ import { motion } from "framer-motion";
 
 const LogoCarousel = () => {
   const clientLogos = [
-    { name: "Apas Show", logo: "/lovable-uploads/event-logos/apas-show.png" },
-    { name: "NaturalTech", logo: "/lovable-uploads/event-logos/naturaltech.png" },
-    { name: "Exposec", logo: "/lovable-uploads/event-logos/exposec.png" },
-    { name: "Bienal do Livro", logo: "/lovable-uploads/event-logos/bienal-do-livro.png" },
-    { name: "Feicon", logo: "/lovable-uploads/event-logos/feicon.png" },
-    { name: "CIOSP", logo: "/lovable-uploads/event-logos/ciosp.png" },
-    { name: "Beauty Fair", logo: "/lovable-uploads/event-logos/beauty-fair.png" },
-    { name: "Futurecom", logo: "/lovable-uploads/event-logos/futurecom.png" },
-    { name: "Feira do Empreendedor", logo: "/lovable-uploads/event-logos/feira-do-empreendedor.png" },
-    { name: "CCXP", logo: "/lovable-uploads/event-logos/ccxp.png" },
-    { name: "Fispal", logo: "/lovable-uploads/event-logos/fispal.png" },
-    { name: "Eletrolar Show", logo: "/lovable-uploads/event-logos/eletrolar-show.png" },
-    { name: "Fórum Ecommerce Brasil", logo: "/lovable-uploads/event-logos/forum-ecommerce-brasil.png" },
-    { name: "BGS", logo: "/lovable-uploads/event-logos/bgs.png" },
+    { name: "Apas Show", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/APAS-SHOW.webp" },
+    { name: "NaturalTech", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/NATURAL-TECH.webp" },
+    { name: "Exposec", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/EXPOSEC.webp" },
+    { name: "Bienal do Livro", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/BIENAL.webp" },
+    { name: "Feicon", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/FEICON.webp" },
+    { name: "CIOSP", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/CIOSP.webp" },
+    { name: "Beauty Fair", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/BEUTY-FAIR.webp" },
+    { name: "Futurecom", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/FUTURECOM.webp" },
+    { name: "Feira do Empreendedor", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/FE25.webp" },
+    { name: "CCXP", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/CCXP.webp" },
+    { name: "Fispal", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/FISPAL.webp" },
+    { name: "Eletrolar Show", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/ES25.webp" },
+    { name: "Fórum Ecommerce Brasil", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/FORUM.webp" },
+    { name: "BGS", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/BGS.webp" },
     // Repeating for smooth carousel
-    { name: "Apas Show", logo: "/lovable-uploads/event-logos/apas-show.png" },
-    { name: "NaturalTech", logo: "/lovable-uploads/event-logos/naturaltech.png" },
-    { name: "Exposec", logo: "/lovable-uploads/event-logos/exposec.png" },
-    { name: "Bienal do Livro", logo: "/lovable-uploads/event-logos/bienal-do-livro.png" },
+    { name: "Apas Show", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/APAS-SHOW.webp" },
+    { name: "NaturalTech", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/NATURAL-TECH.webp" },
+    { name: "Exposec", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/EXPOSEC.webp" },
+    { name: "Bienal do Livro", logo: "http://alugue.operadora.legal/wp-content/uploads/2025/05/BIENAL.webp" },
   ];
 
   return (
