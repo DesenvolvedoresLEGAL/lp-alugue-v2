@@ -23,16 +23,16 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
         </div>
       )}
               
-      <div className="bg-[#040dbe] text-white p-4 text-center">
+      <div className="bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center">
         <h3 className="text-xl font-bold">{plan.name}</h3>
       </div>
       
       <div className="p-6 flex flex-col flex-grow">
-        <div className="text-center mb-6">
+        <div className="text-center mb-6 h-[80px] flex items-center justify-center">
           <div className="bg-white text-black py-2 px-4 rounded-md inline-block">
             <span className="text-3xl font-extrabold tracking-tighter text-[39px]">
               {plan.price}
-              <span className="text-sm font-normal ml-2">/dia</span>
+              <span className="text-sm font-normal ml-2 tracking-widest">/dia</span>
             </span>
           </div>
         </div>
