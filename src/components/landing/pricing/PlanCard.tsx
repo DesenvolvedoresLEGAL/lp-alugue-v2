@@ -17,15 +17,14 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
         plan.isPopular ? 'border-[#040dbe] shadow-lg shadow-[#040dbe]/20' : 'border-gray-200'
       }`}
     >
-      <div className="h-[22px]">
-        {plan.isPopular && (
-          <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg">
-            Mais Popular
-          </div>
-        )}
-      </div>
+      {/* Popular tag overlay */}
+      {plan.isPopular && (
+        <div className="absolute top-0 left-0 right-0 bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg">
+          Mais Popular
+        </div>
+      )}
               
-      <div className={`bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center rounded-t-lg`}>
+      <div className={`bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center rounded-t-lg mt-[22px]`}>
         <h3 className="text-xl font-bold">{plan.name}</h3>
       </div>
       
