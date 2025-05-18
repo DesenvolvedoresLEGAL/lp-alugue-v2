@@ -10,23 +10,23 @@ const FAQ = () => {
   const faqItems = [
     {
       question: "Qual a área de cobertura da internet 5G para eventos?",
-      answer: "Nossa solução cobre todo o território nacional, em áreas urbanas e suburbanas com cobertura 5G. Em locais sem cobertura 5G, oferecemos soluções 4G que garantem performance superior às redes convencionais."
+      answer: "Nossa solução cobre todo o território nacional, em áreas urbanas e suburbanas com cobertura 5G. Em locais sem cobertura 5G, oferecemos soluções 4.5/4G que garantem performance superior às redes convencionais."
     },
     {
       question: "Qual o SLA de disponibilidade da rede?",
-      answer: "Garantimos SLA de 99.99% de disponibilidade durante seu evento, com redundância automática em caso de falha. Caso a rede fique indisponível por mais de 1 minuto acumulado, devolvemos 100% do valor investido."
+      answer: "Garantimos SLA de 99.99% de disponibilidade durante seu evento, com redundância automática em caso de falha (para Planos SPEEDY 5G Ultra ou Live). Caso a rede fique indisponível por mais de 60 minutos seguidos, devolvemos 100% do valor investido*."
     },
     {
       question: "Quais equipamentos são utilizados na instalação?",
-      answer: "Utilizamos apenas equipamentos profissionais de alta performance das marcas Cambium Networks e Ubiquiti. Todos os equipamentos são de nossa propriedade (não alugados) e passam por manutenção preventiva regular."
+      answer: "Utilizamos apenas equipamentos profissionais de alta performance e atualizados periodicamente. Todos os equipamentos são de nossa propriedade e passam por manutenção preventiva regular."
     },
     {
       question: "É cobrada taxa adicional para instalação?",
-      answer: "Não! A instalação já está incluída no valor do serviço para eventos em áreas urbanas. Para localidades remotas, pode haver uma taxa adicional de deslocamento que será informada na cotação."
+      answer: "Sim! A instalação não está incluída no valor do serviço. Também pode haver uma taxa adicional de despesas diversas (deslocamente, alimentação, hospedagem, etc) e que será informada na cotação."
     },
     {
       question: "Como funciona o suporte técnico durante o evento?",
-      answer: "Oferecemos suporte técnico 24/7 por telefone, WhatsApp e email. Para eventos maiores, disponibilizamos um técnico dedicado presente durante todo o período. Além disso, monitoramos proativamente a rede em tempo real."
+      answer: "Oferecemos suporte técnico remoto 24/7/365 por WhatsApp. Para eventos maiores, disponibilizamos um técnico presente durante todo o período. Além disso, monitoramos proativamente a rede em tempo real. Caso queira um técnico exclusivo em seu stand ou evento, a cobrança é à parte"
     },
     {
       question: "É possível cancelar ou remarcar a data?",
