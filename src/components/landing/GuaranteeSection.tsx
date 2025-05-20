@@ -34,6 +34,12 @@ const GuaranteeSection = () => {
                     </svg>
                     <span>99.99% de uptime nos últimos 1.200+ eventos</span>
                   </li>
+                  <li className="flex items-center">
+                    <svg className="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>* </span>
+                  </li>
                 </ul>
               </div>
             </div>
