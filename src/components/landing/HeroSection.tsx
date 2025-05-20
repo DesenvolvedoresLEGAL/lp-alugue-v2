@@ -12,7 +12,7 @@ const HeroSection = () => {
     dataEvento: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const CONTACT_EMAIL = 'gustavo@operadora.legal';
+  const CONTACT_EMAIL = 'sos@operadora.legal';
   const WHATSAPP_NUMBER = "5511999572394";
   const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero alugar agora.";
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,10 +41,10 @@ const HeroSection = () => {
 
       const subject = encodeURIComponent("Reserva de Evento");
       const body = encodeURIComponent(
-        `📅 *Solicitação de Reserva de Evento*%0D%0A
-          Nome: ${name}%0D%0A
-          Email: ${email}%0D%0A
-          Celular: ${phone}%0D%0A
+        `Solicitação de Reserva de Evento
+          Nome: ${name}
+          Email: ${email}
+          Celular: ${phone}
           Data do Evento: ${eventDate}
           `
       );
