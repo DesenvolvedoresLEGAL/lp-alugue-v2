@@ -13,7 +13,7 @@ const HeroSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const WHATSAPP_NUMBER = "5511999572394";
-  const WHATSAPP_MESSAGE_GENERAL = "Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.";
+  const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero alugar agora.";
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       name,
