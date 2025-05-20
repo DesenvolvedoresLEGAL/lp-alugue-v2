@@ -6,27 +6,30 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">LEGAL</h3>
             <p className="text-gray-400 mb-4">Conectividade e tecnologia de alta performance para eventos e negócios de todos os tamanhos.</p>
-            <p className="text-gray-400 text-sm">CNPJ: 54.753.156/0001-72</p>
+            <p className="text-gray-400">CNPJ: 54.753.156/0001-72</p>
           </div>
           
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <p className="text-gray-400 mb-2">Email: sos@operadora.legal</p>
-            <p className="text-gray-400 mb-2">Telefone: (11) 5194-2223</p>
-            <p className="text-gray-400">WhatsApp: (11) 99957-2394</p>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <a className="hover:text-legal-cyan mb-3" 
+                href="mailto:gustavo@operadora.legal?subject=LEGAL, quero contratar agora.">Email: sos@operadora.legal</a>
+              </li>
+              <li>
+                <a className="hover:text-legal-cyan mb-3" href="tel:1151942223">Telefone: (11) 5194-2223</a>
+              </li>
+            </ul>
           </div>
           
           <div>
             <h3 className="text-xl font-bold mb-4">Legal</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-legal-cyan">Política de Privacidade</a>
+                <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" className="hover:text-legal-cyan">R. Salvador Simões, 801, 13 Andar, 1310 - Vila Dom Pedro I, São Paulo - SP</a>
               </li>
               <li>
-                <a href="#" className="hover:text-legal-cyan">Termos de Uso</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-legal-cyan">Política de Cookies</a>
+                <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" className="hover:text-legal-cyan">CEP: 04276-000</a>
               </li>
             </ul>
           </div>
