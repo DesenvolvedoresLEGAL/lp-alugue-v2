@@ -12,6 +12,7 @@ const HeroSection = () => {
     dataEvento: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const CONTACT_EMAIL = 'gustavo@operadora.legal';
   const WHATSAPP_NUMBER = "5511999572394";
   const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero alugar agora.";
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,8 +31,25 @@ const HeroSection = () => {
     try {
       // This would be replaced with actual Supabase code when integrated
       console.log("Submitting form data:", formData);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      const data = new FormData(e.currentTarget);
+
+      const name = data.get('nome');
+      const email = data.get('email');
+      const phone = data.get('celular');
+      const eventDate = data.get('dataEvento');
+
+      const subject = encodeURIComponent("Reserva de Evento");
+      const body = encodeURIComponent(
+        `📅 *Solicitação de Reserva de Evento*%0D%0A
+          Nome: ${name}%0D%0A
+          Email: ${email}%0D%0A
+          Celular: ${phone}%0D%0A
+          Data do Evento: ${eventDate}
+          `
+      );
+
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 
       // Track form submission (would use real tracking when implemented)
       console.log("Tracking event: lead_lp_highconv");
