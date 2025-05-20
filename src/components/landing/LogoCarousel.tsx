@@ -37,7 +37,7 @@ const LogoCarousel = () => {
                   src={client.logo} 
                   alt={`Logo ${client.name}`} 
                   title={client.name} 
-                  className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300" 
+                  className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300 min-w-12" 
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                     console.log(`Failed to load logo for ${client.name}, using placeholder`);
