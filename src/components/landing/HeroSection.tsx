@@ -1,9 +1,12 @@
+
 import { useState } from "react";
 import { toast } from "@/components/ui/sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon, CheckCircleIcon, Clock, MessageCircle } from "lucide-react";
+import emailjs from 'emailjs-com';
+
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -15,6 +18,12 @@ const HeroSection = () => {
   const CONTACT_EMAIL = 'sos@operadora.legal';
   const WHATSAPP_NUMBER = "5511999572394";
   const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero alugar agora.";
+  
+  // EmailJS configuration
+  const EMAILJS_SERVICE_ID = 'default_service'; // Replace with your EmailJS service ID when configured
+  const EMAILJS_TEMPLATE_ID = 'template_default'; // Replace with your EmailJS template ID when configured
+  const EMAILJS_USER_ID = 'user_public_key'; // Replace with your EmailJS public key when configured
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       name,
@@ -25,38 +34,45 @@ const HeroSection = () => {
       [name]: value
     }));
   };
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
     try {
-      // This would be replaced with actual Supabase code when integrated
-      console.log("Submitting form data:", formData);
-
       const data = new FormData(e.currentTarget);
 
       const name = data.get('nome');
       const email = data.get('email');
       const phone = data.get('celular');
       const eventDate = data.get('dataEvento');
-
-      const subject = encodeURIComponent("Reserva de Evento");
-      const body = encodeURIComponent(
-        `Solicitação de Reserva de Evento
-          Nome: ${name}
-          Email: ${email}
-          Celular: ${phone}
-          Data do Evento: ${eventDate}
-          `
-      );
-
-      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-
+      
       // Track form submission (would use real tracking when implemented)
       console.log("Tracking event: lead_lp_highconv");
+      console.log("Submitting form data:", formData);
+      
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        to_email: CONTACT_EMAIL,
+        from_name: name,
+        from_email: email,
+        phone: phone,
+        event_date: eventDate,
+        message: `Solicitação de Reserva de Evento\nNome: ${name}\nEmail: ${email}\nCelular: ${phone}\nData do Evento: ${eventDate}`,
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+      
       toast.success("Formulário enviado com sucesso! Entraremos em contato em breve.", {
         duration: 5000
       });
-
+      
       // Reset form
       setFormData({
         nome: "",
@@ -71,9 +87,11 @@ const HeroSection = () => {
       setIsSubmitting(false);
     }
   };
+  
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE_GENERAL)}`, "_blank");
   };
+  
   return <div className="relative min-h-[90vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
