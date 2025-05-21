@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { toast } from "@/components/ui/sonner";
 import { Button } from "@/components/ui/button";
@@ -20,9 +19,9 @@ const HeroSection = () => {
   const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero alugar agora.";
   
   // EmailJS configuration
-  const EMAILJS_SERVICE_ID = 'default_service'; // Replace with your EmailJS service ID when configured
-  const EMAILJS_TEMPLATE_ID = 'template_default'; // Replace with your EmailJS template ID when configured
-  const EMAILJS_USER_ID = 'user_public_key'; // Replace with your EmailJS public key when configured
+  const EMAILJS_SERVICE_ID = 'service_wi3kvx7'; // Replace with your EmailJS service ID when configured
+  const EMAILJS_TEMPLATE_ID = 'template_5l2767r'; // Replace with your EmailJS template ID when configured
+  const EMAILJS_USER_ID = 'oLw9xvmdczE218mGh'; // Replace with your EmailJS public key when configured
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {

@@ -1,5 +1,3 @@
-import { facebook } from "lucide-react"
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-gray-900 text-white py-12">
