@@ -13,8 +13,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contato</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a className="hover:text-legal-cyan mb-3" 
-                href="mailto:gustavo@operadora.legal?subject=LEGAL, quero contratar agora.">Email: sos@operadora.legal</a>
+                <a className="hover:text-legal-cyan mb-3" href="mailto:gustavo@operadora.legal?subject=LEGAL, quero contratar agora.">Email: sos@operadora.legal</a>
               </li>
               <li>
                 <a className="hover:text-legal-cyan mb-3" href="tel:1151942223">Telefone: (11) 5194-2223</a>
@@ -23,7 +22,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-4">Legal</h3>
+            <h3 className="text-xl font-bold mb-4">Endereço</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" className="hover:text-legal-cyan">R. Salvador Simões, 801, 13 Andar, 1310 - Vila Dom Pedro I, São Paulo - SP</a>
