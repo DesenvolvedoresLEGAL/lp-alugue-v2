@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Plan } from "./types";
@@ -26,7 +25,7 @@ const PlanCard = ({
       <div className="p-6 flex flex-col flex-grow bg-white">
         <div className="text-center mb-6 h-[80px] flex items-center justify-center">
           <div className="bg-white text-black py-2 px-4 rounded-md inline-block">
-            <span className="text-3xl font-extrabold tracking-tighter text-[39px]">
+            <span className="font-extrabold tracking-tighter text-2xl">
               {plan.price}
               <span className="text-sm font-normal ml-2 tracking-[0.2em]">/dia</span>
             </span>
