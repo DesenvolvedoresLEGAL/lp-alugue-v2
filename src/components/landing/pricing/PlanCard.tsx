@@ -25,7 +25,7 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
         )}
       </div>
               
-      <div className={`bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center rounded-t-lg`}>
+      <div className={`bg-[#040dbe] text-white p-4 text-center h-[70px] flex items-center justify-center ${!plan.isPopular ? 'rounded-t-lg' : ''}`}>
         <h3 className="text-xl font-bold">{plan.name}</h3>
       </div>
       
