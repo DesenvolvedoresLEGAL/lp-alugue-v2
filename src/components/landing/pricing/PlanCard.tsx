@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Plan } from "./types";
+import { Badge } from "@/components/ui/badge";
 
 interface PlanCardProps {
   plan: Plan;
@@ -29,7 +30,7 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
         <h3 className="text-xl font-bold">{plan.name}</h3>
       </div>
       
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col flex-grow bg-white">
         <div className="text-center mb-6 h-[80px] flex items-center justify-center">
           <div className="bg-white text-black py-2 px-4 rounded-md inline-block">
             <span className="text-3xl font-extrabold tracking-tighter text-[39px]">
@@ -61,6 +62,8 @@ const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
           ))}
         </ul>
       </div>
+      
+      <div className="bg-[#040dbe] h-4 rounded-b-lg"></div>
     </div>
   );
 };
