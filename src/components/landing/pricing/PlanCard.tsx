@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Plan } from "./types";
@@ -14,7 +13,7 @@ const PlanCard = ({
   const whatsappLink = `https://wa.me/5511999572394?text=Fala%20LEGAL%2C%20quero%20alugar%20agora!`;
   return <div className={`rounded-lg overflow-hidden border flex flex-col transition-all duration-200 hover:border-[#040dbe] bg-white ${plan.isPopular ? 'border-[#040dbe] shadow-lg shadow-[#040dbe]/20' : 'border-gray-200'}`}>
       <div className="h-[22px]">
-        {plan.isPopular && <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg planopopular maispopular">
+        {plan.isPopular && <div className="bg-black text-white text-center py-1 font-bold text-xs tracking-tight rounded-t-lg planopopular">
             Mais Popular
           </div>}
       </div>
