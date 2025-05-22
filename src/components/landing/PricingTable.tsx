@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { toast } from "@/components/ui/sonner";
 import PlanCard from "./pricing/PlanCard";
@@ -78,12 +77,11 @@ const PricingTable = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {plans.map(plan => (
-            <div key={plan.id} className={`${plan.isPopular ? '' : 'pt-[22px]'}`}>
-              <PlanCard 
-                plan={plan} 
-                onSelectPlan={openDialog} 
-              />
-            </div>
+            <PlanCard 
+              key={plan.id} 
+              plan={plan} 
+              onSelectPlan={openDialog} 
+            />
           ))}
         </div>
         
