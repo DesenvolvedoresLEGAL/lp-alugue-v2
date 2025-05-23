@@ -16,8 +16,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/alugue/high-conversion" replace />} />
-          <Route path="/alugue/high-conversion" element={<HighConversionLanding />} />
+          <Route path="/" element={<HighConversionLanding />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
