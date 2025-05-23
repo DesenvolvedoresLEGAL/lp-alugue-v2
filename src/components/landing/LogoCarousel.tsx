@@ -3,25 +3,25 @@ import { motion } from "framer-motion";
 
 const LogoCarousel = () => {
   const clientLogos = [
-    { name: "Apas Show", logo: "/src/assets/APAS-SHOW.webp" },
-    { name: "NaturalTech", logo: "/src/assets/NATURAL-TECH.webp" },
-    { name: "Exposec", logo: "/src/assets/EXPOSEC.webp" },
-    { name: "Bienal do Livro", logo: "/src/assets/BIENAL.webp" },
-    { name: "Feicon", logo: "/src/assets/FEICON.webp" },
-    { name: "CIOSP", logo: "/src/assets/CIOSP.webp" },
-    { name: "Beauty Fair", logo: "/src/assets/BEUTY-FAIR.webp" },
-    { name: "Futurecom", logo: "/src/assets/FUTURECOM.webp" },
-    { name: "Feira do Empreendedor", logo: "/src/assets/FE25.webp" },
-    { name: "CCXP", logo: "/src/assets/CCXP.webp" },
-    { name: "Fispal", logo: "/src/assets/FISPAL.webp" },
-    { name: "Eletrolar Show", logo: "/src/assets/ES25.webp" },
-    { name: "Fórum Ecommerce Brasil", logo: "/src/assets/FORUM.webp" },
-    { name: "BGS", logo: "/src/assets/BGS.webp" },
+    { name: "Apas Show", logo: "./assets/APAS-SHOW.webp" },
+    { name: "NaturalTech", logo: "./assets/NATURAL-TECH.webp" },
+    { name: "Exposec", logo: "./assets/EXPOSEC.webp" },
+    { name: "Bienal do Livro", logo: "./assets/BIENAL.webp" },
+    { name: "Feicon", logo: "./assets/FEICON.webp" },
+    { name: "CIOSP", logo: "./assets/CIOSP.webp" },
+    { name: "Beauty Fair", logo: "./assets/BEUTY-FAIR.webp" },
+    { name: "Futurecom", logo: "./assets/FUTURECOM.webp" },
+    { name: "Feira do Empreendedor", logo: "./assets/FE25.webp" },
+    { name: "CCXP", logo: "./assets/CCXP.webp" },
+    { name: "Fispal", logo: "./assets/FISPAL.webp" },
+    { name: "Eletrolar Show", logo: "./assets/ES25.webp" },
+    { name: "Fórum Ecommerce Brasil", logo: "./assets/FORUM.webp" },
+    { name: "BGS", logo: "./assets/BGS.webp" },
     // Repeating for smooth carousel
-    { name: "Apas Show", logo: "/src/assets/APAS-SHOW.webp" },
-    { name: "NaturalTech", logo: "/src/assets/NATURAL-TECH.webp" },
-    { name: "Exposec", logo: "/src/assets/EXPOSEC.webp" },
-    { name: "Bienal do Livro", logo: "/src/assets/BIENAL.webp" },
+    { name: "Apas Show", logo: "./assets/APAS-SHOW.webp" },
+    { name: "NaturalTech", logo: "./assets/NATURAL-TECH.webp" },
+    { name: "Exposec", logo: "./assets/EXPOSEC.webp" },
+    { name: "Bienal do Livro", logo: "./assets/BIENAL.webp" },
   ];
 
   return (
