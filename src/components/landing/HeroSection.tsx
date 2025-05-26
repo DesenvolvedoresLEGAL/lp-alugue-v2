@@ -11,7 +11,7 @@ const HeroSection = () => {
     nome: "",
     email: "",
     celular: "",
-    dataEvento: ""
+    nomeEvento: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const CONTACT_EMAIL = 'sos@operadora.legal';
@@ -44,7 +44,7 @@ const HeroSection = () => {
       const name = data.get('nome');
       const email = data.get('email');
       const phone = data.get('celular');
-      const eventDate = data.get('dataEvento');
+      const eventName = data.get('nomeEvento');
       
       // Track form submission (would use real tracking when implemented)
       console.log("Tracking event: lead_lp_highconv");
@@ -56,8 +56,8 @@ const HeroSection = () => {
         from_name: name,
         from_email: email,
         phone: phone,
-        event_date: eventDate,
-        message: `Solicitação de Reserva de Evento\nNome: ${name}\nEmail: ${email}\nCelular: ${phone}\nData do Evento: ${eventDate}`,
+        event_name: eventName,
+        message: `Solicitação de Reserva de Evento\n\tNome: ${name}\n\tEmail: ${email}\n\tCelular: ${phone}\n\tNome do Evento: ${eventName}`,
       };
       
       // Send email using EmailJS
@@ -77,7 +77,7 @@ const HeroSection = () => {
         nome: "",
         email: "",
         celular: "",
-        dataEvento: ""
+        nomeEvento: ""
       });
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -161,10 +161,9 @@ const HeroSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="dataEvento" className="text-white">Data do Evento</Label>
+                  <Label htmlFor="nomeEvento" className="text-white">Nome do Evento</Label>
                   <div className="relative">
-                    <CalendarIcon className="absolute left-3 top-3 h-5 w-5 text-white/50" />
-                    <Input id="dataEvento" name="dataEvento" type="date" value={formData.dataEvento} onChange={handleChange} required className="bg-white/20 border-white/30 text-white pl-10" />
+                    <Input id="nomeEvento" name="nomeEvento" type="text" placeholder="Digite o nome do evento" value={formData.nomeEvento} onChange={handleChange} required className="bg-white/20 border-white/30 text-white placeholder:text-white/50" />
                   </div>
                 </div>
               </div>
