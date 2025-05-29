@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +27,7 @@
   gtag('config', 'G-S7LE46Z77M');
 </script>
 
-    <!-- Event snippet for ALUGUE: Botão Whats conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!-- Event snippet for ALUGUE: Botão Whats conversion page -->
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
@@ -42,19 +42,6 @@ function gtag_report_conversion(url) {
   return false;
 }
 </script>
-  
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NTC7D6R');
-  </script>
-  <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -62,6 +49,24 @@ function gtag_report_conversion(url) {
   <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- Google Tag Manager - Moved to bottom and wrapped in DOMContentLoaded -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait for the root element to be available
+      if (document.getElementById('root')) {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+              new Date().getTime(), event: 'gtm.js'
+          }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NTC7D6R');
+      }
+    });
+  </script>
+  
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTC7D6R" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
