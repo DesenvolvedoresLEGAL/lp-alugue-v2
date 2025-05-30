@@ -65,12 +65,12 @@ const HeroSection = () => {
       };
       
       // Send email using EmailJS
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
-      );
+      // await emailjs.send(
+      //   EMAILJS_SERVICE_ID,
+      //   EMAILJS_TEMPLATE_ID,
+      //   templateParams,
+      //   EMAILJS_USER_ID
+      // );
       
       toast.success("Formulário enviado com sucesso! Entraremos em contato em breve.", {
         duration: 5000
@@ -85,17 +85,7 @@ const HeroSection = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-
-      switch (error) {
-        case "Error: Número de telefone inválido.":
-          toast.error(`Erro ao enviar o formulário. ${error}`);
-          break;
-      
-        default:
-          toast.error(`Erro ao enviar o formulário. Por favor, tente novamente.`);
-          break;
-      }
-
+      toast.error("Erro ao enviar o formulário. Por favor, tente novamente.");
     } finally {
       setIsSubmitting(false);
     }
