@@ -65,12 +65,12 @@ const HeroSection = () => {
       };
       
       // Send email using EmailJS
-      // await emailjs.send(
-      //   EMAILJS_SERVICE_ID,
-      //   EMAILJS_TEMPLATE_ID,
-      //   templateParams,
-      //   EMAILJS_USER_ID
-      // );
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
       
       toast.success("Formulário enviado com sucesso! Entraremos em contato em breve.", {
         duration: 5000
