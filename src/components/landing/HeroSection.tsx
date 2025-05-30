@@ -49,6 +49,10 @@ const HeroSection = () => {
       // Track form submission (would use real tracking when implemented)
       console.log("Tracking event: lead_lp_highconv");
       console.log("Submitting form data:", formData);
+
+      if (phone.toString().length > 11) {
+        throw new Error("Número de telefone inválido.");
+      }
       
       // Prepare template parameters for EmailJS
       const templateParams = {
@@ -81,7 +85,17 @@ const HeroSection = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Erro ao enviar o formulário. Por favor, tente novamente.");
+
+      switch (error) {
+        case "Error: Número de telefone inválido.":
+          toast.error(`Erro ao enviar o formulário. ${error}`);
+          break;
+      
+        default:
+          toast.error(`Erro ao enviar o formulário. Por favor, tente novamente.`);
+          break;
+      }
+
     } finally {
       setIsSubmitting(false);
     }
