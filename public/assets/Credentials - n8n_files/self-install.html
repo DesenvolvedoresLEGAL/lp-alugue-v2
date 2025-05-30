@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0148)https://n8n.io/self-install/?instanceId=d1106de04eddc873150c2a757cd70f516e7fe86acb5b2345653567757a367871&userId=9d0f7a23-9309-46fe-a829-a523ea2c08cb -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="robots" content="noindex">
+  <title>Self-install</title>
+  <!-- Google Tag Manager -->
+  <script type="text/javascript" async="" src="./js"></script><script async="" src="./gtm.js.download"></script><script>
+    ;(function (w, d, s, l, i) {
+      w[l] = w[l] || []
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : ''
+      j.async = true
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+      f.parentNode.insertBefore(j, f)
+    })(window, document, 'script', 'dataLayer', 'GTM-WQN2D6RQ')
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe
+  src="https://www.googletagmanager.com/ns.html?id=GTM-WQN2D6RQ"
+  height="0"
+  width="0"
+  style="display: none; visibility: hidden"></iframe
+></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+  function getInstanceIdFromUrl() {
+    const params = new URLSearchParams(window.location.search)
+    return params.get('instanceId')
+  }
+
+  function getUserIdFromUrl() {
+    const params = new URLSearchParams(window.location.search)
+    return params.get('userId')
+  }
+
+  function localStorageHandler(handle) {
+    if (handle && handle.localStorage) {
+      return handle.localStorage.getItem('ga_client_id')
+    }
+
+    return localStorage.getItem('ga_client_id')
+  }
+
+  async function getGAClientId() {
+    if (document.hasStorageAccess) {
+      const hasAccess = await document.hasStorageAccess()
+
+      if (hasAccess) {
+        const handle = await document.requestStorageAccess({
+          localStorage: true
+        })
+        return localStorageHandler(handle)
+      } else {
+        try {
+          const permission = await navigator.permissions.query({
+            name: 'storage-access'
+          })
+
+          if (permission.state === 'granted') {
+            const handle = await document.requestStorageAccess({
+              cookies: true,
+              localStorage: true
+            })
+            return localStorageHandler(handle)
+          } else if (permission.state === 'prompt') {
+            btn &&
+            btn.addEventListener('click', async () => {
+              try {
+                const handle = await document.requestStorageAccess({
+                  cookies: true,
+                  localStorage: true
+                })
+                return localStorageHandler(handle)
+              } catch (err) {}
+            })
+          }
+        } catch (error) {}
+      }
+    }
+  }
+
+  async function updateDataLayer() {
+    const instanceId = getInstanceIdFromUrl()
+    const userId = getUserIdFromUrl()
+    const gaClientId = await getGAClientId()
+
+    if (dataLayer && instanceId && userId) {
+      dataLayer.push({
+        event: 'Instance session',
+        instanceId,
+        userId,
+        gaClientId
+      })
+    }
+  }
+
+  updateDataLayer()
+</script>
+<script defer="" src="./vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;94678acf6c432d34&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.4.0-1-g37f21b1&quot;,&quot;token&quot;:&quot;6506ba347f0b493ea14a31b0b3fdabc0&quot;}" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" id="" charset="">(function(){function l(){var a=window.location.hostname.split(".");a.length>2&&a.shift();return a.join(".")}function m(a){var c="; "+document.cookie;a=c.split("; "+a+"\x3d");return a.length===2?a.pop().split(";").shift():null}function g(a,c,d,b){var e=new Date;e.setTime(e.getTime()+d*24*60*60*1E3);d="expires\x3d"+e.toUTCString();b=b?";domain\x3d"+b:"";document.cookie=a+"\x3d"+c+";"+d+";path\x3d/"+b+";SameSite\x3dNone;Secure"}var f="n8n_tracking_id";try{var h=l(),k=m(f);if(k)g(f,k,730,"."+h);else{var n=
+Math.random().toString(36).substring(2)+Date.now().toString(36);g(f,n,730,"."+h)}}catch(a){console.error("Error handling the cookie:",a)}})();</script><script type="text/javascript" id="" charset="">function timerDelay(){dataLayer.push({event:"timerDelay"})}setTimeout(timerDelay,3E3);</script></body></html>

@@ -49,6 +49,13 @@ const HeroSection = () => {
       // Track form submission (would use real tracking when implemented)
       console.log("Tracking event: lead_lp_highconv");
       console.log("Submitting form data:", formData);
+
+      if (phone.toString().length > 11) {
+        console.log(phone.toString().length);
+        throw new Error('Tamanho de telefone inválido');
+      }
+
+      
       
       // Prepare template parameters for EmailJS
       const templateParams = {
@@ -61,12 +68,12 @@ const HeroSection = () => {
       };
       
       // Send email using EmailJS
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
-      );
+      // await emailjs.send(
+      //   EMAILJS_SERVICE_ID,
+      //   EMAILJS_TEMPLATE_ID,
+      //   templateParams,
+      //   EMAILJS_USER_ID
+      // );
       
       toast.success("Formulário enviado com sucesso! Entraremos em contato em breve.", {
         duration: 5000
@@ -81,7 +88,7 @@ const HeroSection = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Erro ao enviar o formulário. Por favor, tente novamente.");
+      toast.error(`Erro ao enviar o formulário. ${error}.`);
     } finally {
       setIsSubmitting(false);
     }
