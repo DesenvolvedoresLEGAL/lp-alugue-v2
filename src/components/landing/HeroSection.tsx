@@ -39,6 +39,7 @@ const HeroSection = () => {
     setIsSubmitting(true);
     
     try {
+
       const data = new FormData(e.currentTarget);
 
       const name = data.get('nome');
@@ -63,6 +64,8 @@ const HeroSection = () => {
         event_name: eventName,
         message: `Solicitação de Reserva de Evento\n\tNome: ${name}\n\tEmail: ${email}\n\tCelular: ${phone}\n\tNome do Evento: ${eventName}`,
       };
+
+      console.log(templateParams);
       
       // Send email using EmailJS
       await emailjs.send(
@@ -85,7 +88,7 @@ const HeroSection = () => {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Erro ao enviar o formulário. Por favor, tente novamente.");
+      toast.error(`Erro ao enviar o formulário. ${error}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -163,7 +166,7 @@ const HeroSection = () => {
                 
                 <div className="space-y-2">
                   <Label htmlFor="celular" className="text-white">Celular</Label>
-                  <Input id="celular" name="celular" type="tel" placeholder="(11) 98765-4321" value={formData.celular} onChange={handleChange} required className="bg-white/20 border-white/30 text-white placeholder:text-white/50" />
+                  <Input id="celular" name="celular" type="tel" placeholder="(11) 98765-4321" pattern="(\d{2})(\d{1})(\d{4})(\d{4})" value={formData.celular} onChange={handleChange} required className="bg-white/20 border-white/30 text-white placeholder:text-white/50" />
                 </div>
                 
                 <div className="space-y-2">
