@@ -2,12 +2,17 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Plan } from "./types";
 import { Badge } from "@/components/ui/badge";
+import { frameSteps } from "framer-motion";
 interface PlanCardProps {
   plan: Plan;
   onSelectPlan: (planId: string) => void;
 }
 const PlanCard = ({ plan, onSelectPlan }: PlanCardProps) => {
-  const whatsappLink = `https://wa.me/5511999572394?text=Fala%20LEGAL%2C%20quero%20alugar%20agora!`;
+
+  const WHATSAPP_NUMBER = "5511999572394";
+  const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero contratar agora.";
+
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE_GENERAL}`;
   return (
     <div className="relative h-full">
       {plan.isPopular && (

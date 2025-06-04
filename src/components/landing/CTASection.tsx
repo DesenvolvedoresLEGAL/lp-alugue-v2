@@ -1,6 +1,8 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "5511999572394";
+const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero contratar agora.";
 
 const CTASection = () => {
   const handleScrollToForm = () => {
@@ -12,7 +14,7 @@ const CTASection = () => {
 
   const handleWhatsAppClick = () => {
     // Replace with actual WhatsApp link
-    window.open("https://wa.me/5511999572394?text=Olá! Gostaria de saber mais sobre o aluguel de internet 5G para eventos.", "_blank");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE_GENERAL}`, "_blank");
   };
 
   return (
