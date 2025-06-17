@@ -93,25 +93,17 @@ const HeroSection = () => {
   };
   
   return <div className="relative min-h-[90vh] flex items-center">
-      {/* Optimized Background Image with WebP support and enhanced performance */}
+      {/* Optimized Background Image with high priority loading */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-10"></div>
-        <picture>
-          <source 
-            srcSet="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.webp" 
-            type="image/webp"
-          />
-          <img 
-            src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" 
-            alt="Smart city with 5G connectivity" 
-            className="w-full h-full object-cover" 
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-            width="1920"
-            height="1080"
-          />
-        </picture>
+        <img 
+          src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" 
+          alt="Smart city with 5G connectivity" 
+          className="w-full h-full object-cover" 
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
       </div>
 
       {/* Company Logo at the top with optimized loading */}
