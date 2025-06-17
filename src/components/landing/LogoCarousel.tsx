@@ -3,25 +3,25 @@ import { motion } from "framer-motion";
 
 const LogoCarousel = () => {
   const clientLogos = [
-    { name: "Apas Show", logo: "./assets/APAS-SHOW.webp" },
-    { name: "NaturalTech", logo: "./assets/NATURAL-TECH.webp" },
-    { name: "Exposec", logo: "./assets/EXPOSEC.webp" },
-    { name: "Bienal do Livro", logo: "./assets/BIENAL.webp" },
-    { name: "Feicon", logo: "./assets/FEICON.webp" },
-    { name: "CIOSP", logo: "./assets/CIOSP.webp" },
-    { name: "Beauty Fair", logo: "./assets/BEUTY-FAIR.webp" },
-    { name: "Futurecom", logo: "./assets/FUTURECOM.webp" },
-    { name: "Feira do Empreendedor", logo: "./assets/FE25.webp" },
-    { name: "CCXP", logo: "./assets/CCXP.webp" },
-    { name: "Fispal", logo: "./assets/FISPAL.webp" },
-    { name: "Eletrolar Show", logo: "./assets/ES25.webp" },
-    { name: "Fórum Ecommerce Brasil", logo: "./assets/FORUM.webp" },
-    { name: "BGS", logo: "./assets/BGS.webp" },
+    { name: "Apas Show", logo: "./assets/APAS-SHOW.webp", priority: true },
+    { name: "NaturalTech", logo: "./assets/NATURAL-TECH.webp", priority: true },
+    { name: "Exposec", logo: "./assets/EXPOSEC.webp", priority: true },
+    { name: "Bienal do Livro", logo: "./assets/BIENAL.webp", priority: true },
+    { name: "Feicon", logo: "./assets/FEICON.webp", priority: false },
+    { name: "CIOSP", logo: "./assets/CIOSP.webp", priority: false },
+    { name: "Beauty Fair", logo: "./assets/BEUTY-FAIR.webp", priority: false },
+    { name: "Futurecom", logo: "./assets/FUTURECOM.webp", priority: false },
+    { name: "Feira do Empreendedor", logo: "./assets/FE25.webp", priority: false },
+    { name: "CCXP", logo: "./assets/CCXP.webp", priority: false },
+    { name: "Fispal", logo: "./assets/FISPAL.webp", priority: false },
+    { name: "Eletrolar Show", logo: "./assets/ES25.webp", priority: false },
+    { name: "Fórum Ecommerce Brasil", logo: "./assets/FORUM.webp", priority: false },
+    { name: "BGS", logo: "./assets/BGS.webp", priority: false },
     // Repeating for smooth carousel
-    { name: "Apas Show", logo: "./assets/APAS-SHOW.webp" },
-    { name: "NaturalTech", logo: "./assets/NATURAL-TECH.webp" },
-    { name: "Exposec", logo: "./assets/EXPOSEC.webp" },
-    { name: "Bienal do Livro", logo: "./assets/BIENAL.webp" },
+    { name: "Apas Show", logo: "./assets/APAS-SHOW.webp", priority: false },
+    { name: "NaturalTech", logo: "./assets/NATURAL-TECH.webp", priority: false },
+    { name: "Exposec", logo: "./assets/EXPOSEC.webp", priority: false },
+    { name: "Bienal do Livro", logo: "./assets/BIENAL.webp", priority: false },
   ];
 
   return (
@@ -38,6 +38,8 @@ const LogoCarousel = () => {
                   alt={`Logo ${client.name}`} 
                   title={client.name} 
                   className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300 min-w-12" 
+                  loading={client.priority ? "eager" : "lazy"}
+                  decoding="async"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                     console.log(`Failed to load logo for ${client.name}, using placeholder`);
@@ -45,7 +47,7 @@ const LogoCarousel = () => {
                 />
               </div>
             ))}
-            {/* Duplicate set of logos for infinite scroll effect - ensuring enough items for a smooth loop */}
+            {/* Duplicate set of logos for infinite scroll effect */}
             {clientLogos.map((client, index) => (
               <div key={`logo-set2-${index}`} className="min-w-[187px] md:min-w-[225px] px-8 flex items-center justify-center">
                 <img 
@@ -53,6 +55,8 @@ const LogoCarousel = () => {
                   alt={`Logo ${client.name}`} 
                   title={client.name} 
                   className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300" 
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                     console.log(`Failed to load logo for ${client.name}, using placeholder`);

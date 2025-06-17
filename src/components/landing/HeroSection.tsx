@@ -19,9 +19,9 @@ const HeroSection = () => {
   const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero alugar agora.";
   
   // EmailJS configuration
-  const EMAILJS_SERVICE_ID = 'service_wi3kvx7'; // Replace with your EmailJS service ID when configured
-  const EMAILJS_TEMPLATE_ID = 'template_5l2767r'; // Replace with your EmailJS template ID when configured
-  const EMAILJS_USER_ID = 'oLw9xvmdczE218mGh'; // Replace with your EmailJS public key when configured
+  const EMAILJS_SERVICE_ID = 'service_wi3kvx7';
+  const EMAILJS_TEMPLATE_ID = 'template_5l2767r';
+  const EMAILJS_USER_ID = 'oLw9xvmdczE218mGh';
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
@@ -39,15 +39,12 @@ const HeroSection = () => {
     setIsSubmitting(true);
     
     try {
-
       const data = new FormData(e.currentTarget);
-
       const name = data.get('nome');
       const email = data.get('email');
       const phone = data.get('celular');
       const eventName = data.get('nomeEvento');
       
-      // Track form submission (would use real tracking when implemented)
       console.log("Tracking event: lead_lp_highconv");
       console.log("Submitting form data:", formData);
 
@@ -55,7 +52,6 @@ const HeroSection = () => {
         throw new Error("Número de telefone inválido.");
       }
       
-      // Prepare template parameters for EmailJS
       const templateParams = {
         to_email: CONTACT_EMAIL,
         from_name: name,
@@ -67,7 +63,6 @@ const HeroSection = () => {
 
       console.log(templateParams);
       
-      // Send email using EmailJS
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -79,7 +74,6 @@ const HeroSection = () => {
         duration: 5000
       });
       
-      // Reset form
       setFormData({
         nome: "",
         email: "",
@@ -99,16 +93,29 @@ const HeroSection = () => {
   };
   
   return <div className="relative min-h-[90vh] flex items-center">
-      {/* Background Image */}
+      {/* Optimized Background Image with high priority loading */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-10"></div>
-        <img src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" alt="Smart city with 5G connectivity" className="w-full h-full object-cover" />
+        <img 
+          src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" 
+          alt="Smart city with 5G connectivity" 
+          className="w-full h-full object-cover" 
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+        />
       </div>
 
-      {/* Company Logo at the top */}
+      {/* Company Logo at the top with optimized loading */}
       <div className="absolute top-6 left-0 right-0 z-30 container-custom">
         <div className="flex justify-start">
-          <img src="./assets/Logo-Alugue-Branco.png.webp" alt="LEGAL - Internet 5G para eventos" className="max-w-[165px] h-auto" />
+          <img 
+            src="./assets/Logo-Alugue-Branco.png.webp" 
+            alt="LEGAL - Internet 5G para eventos" 
+            className="max-w-[165px] h-auto" 
+            loading="eager"
+            decoding="async"
+          />
         </div>
       </div>
 
@@ -118,7 +125,6 @@ const HeroSection = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-white">
-            {/* Company Logo */}
             <div className="mb-6">
               
             </div>
