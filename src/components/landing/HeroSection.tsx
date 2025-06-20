@@ -137,7 +137,7 @@ const HeroSection = () => {
             
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 text-white">
+          <div className="space-y-6 text-white text-center sm:text-left"> 
             <div className="mb-6">
               
             </div>
