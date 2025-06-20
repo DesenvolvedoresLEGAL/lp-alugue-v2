@@ -112,7 +112,7 @@ const HeroSection = () => {
           <img
           src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp"
           className="w-full h-full object-cover" 
-          loading="lazy"
+          loading="eager"
           decoding="async"
           alt="Plano de fundo do Header Section"     
           />
