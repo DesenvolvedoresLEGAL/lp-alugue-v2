@@ -142,7 +142,7 @@ const HeroSection = () => {
               
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-snug md:leading-tight">Internet 5G para eventos, instalada em até 60 min</h1>
+            <h1 className="text-3xl lg:text-5xl font-extrabold leading-snug md:leading-tight">Internet 5G para eventos, instalada em até 60 min</h1>
             
             <p className="text-lg md:text-2xl">
               Velocidade 10× maior que a rede oficial do pavilhão, sem burocracia.
