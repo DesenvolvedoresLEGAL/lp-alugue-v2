@@ -97,20 +97,20 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-10"></div>
         <picture>
-          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.jpeg"
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.webp"
           media="(max-width: 552px)"
+          type="image/webp"
            />
-          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.jpeg"
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.webp"
           media="(min-width: 553px) and (max-width: 690px)"
+          type="image/webp"
           />
-          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.jpeg" 
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" 
           media="(min-width: 691px)"
-          />
-          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-full.png" 
-          media="(min-width: 1280px)"
+          type="image/webp"
           />
           <img
-          src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-full.png"
+          src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp"
           className="w-full h-full object-cover" 
           loading="eager"
           decoding="async"          
