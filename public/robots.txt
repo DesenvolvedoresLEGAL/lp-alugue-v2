@@ -12,3 +12,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+User-agent: *
+Disallow: /alugue
+Allow: /
+
+Sitemap: https://alugue.operadora.legal/sitemap.xml
