@@ -96,14 +96,26 @@ const HeroSection = () => {
       {/* Optimized Background Image with high priority loading */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-10"></div>
-        <img 
-          src="/lovable-uploads/7ef35a50-b7b8-4255-9522-f7dca476a652.png" 
-          alt="Smart city with 5G connectivity" 
+        <picture>
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.jpeg"
+          media="(max-width: 552px)"
+           />
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.jpeg"
+          media="(min-width: 553px) and (max-width: 690px)"
+          />
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.jpeg" 
+          media="(min-width: 691px)"
+          />
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-full.png" 
+          media="(min-width: 1280px)"
+          />
+          <img
+          src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-full.png"
           className="w-full h-full object-cover" 
-          fetchPriority="high"
           loading="eager"
-          decoding="async"
-        />
+          decoding="async"          
+          />
+        </picture>
       </div>
 
       {/* Company Logo at the top with optimized loading */}
