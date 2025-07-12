@@ -3,7 +3,6 @@ import { toast } from "@/components/ui/sonner";
 import PlanCard from "./pricing/PlanCard";
 import QuoteDialog from "./pricing/QuoteDialog";
 import { plans, WHATSAPP_NUMBER, WHATSAPP_MESSAGE_PLAN } from "./pricing/planData";
-
 const PricingTable = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -14,15 +13,16 @@ const PricingTable = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -54,7 +54,6 @@ const PricingTable = () => {
       setIsSubmitting(false);
     }
   };
-  
   const openDialog = (planId: string) => {
     setFormData(prev => ({
       ...prev,
@@ -62,9 +61,7 @@ const PricingTable = () => {
     }));
     setDialogOpen(true);
   };
-
-  return (
-    <div className="py-16 bg-transparent">
+  return <div className="py-16 bg-transparent">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -76,30 +73,15 @@ const PricingTable = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {plans.map(plan => (
-            <PlanCard 
-              key={plan.id} 
-              plan={plan} 
-              onSelectPlan={openDialog} 
-            />
-          ))}
+          {plans.map(plan => <PlanCard key={plan.id} plan={plan} onSelectPlan={openDialog} />)}
         </div>
         
         <div className="text-center p-4 rounded-lg border border-blue-200 mt-8 bg-blue-200">
-          <p className="font-bold text-[#020cbc]">Agenda de junho 70% preenchida — garanta seu evento conectado antes que acabe!</p>
+          <p className="font-bold text-[#020cbc]">Agenda de Agosto 40% preenchida — garanta seu evento conectado antes que acabe!</p>
         </div>
 
-        <QuoteDialog
-          open={dialogOpen}
-          onOpenChange={setDialogOpen}
-          formData={formData}
-          isSubmitting={isSubmitting}
-          onSubmit={handleSubmit}
-          onChange={handleChange}
-        />
+        <QuoteDialog open={dialogOpen} onOpenChange={setDialogOpen} formData={formData} isSubmitting={isSubmitting} onSubmit={handleSubmit} onChange={handleChange} />
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default PricingTable;
