@@ -44,9 +44,7 @@ const Footer = () => {
               <li>
                 <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" target="_blank" className="hover:text-legal-cyan">R. Salvador Simões, 801, 12º Andar Cjs. 1201/1210 - Alto do Ipiranga - São Paulo/SP - CEP: 04276-000</a>
               </li>
-              <li>
-                <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" target="_blank" className="hover:text-legal-cyan">CEP: 04276-000</a>
-              </li>
+              
             </ul>
           </div>
         </div>
