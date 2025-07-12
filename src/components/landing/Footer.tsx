@@ -42,7 +42,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Endereço</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" target="_blank" className="hover:text-legal-cyan">R. Salvador Simões, 801, 13 Andar, 1310 - Vila Dom Pedro I, São Paulo - SP</a>
+                <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" target="_blank" className="hover:text-legal-cyan">R. Salvador Simões, 801, 12º Andar Cjs. 1201/1210 - Alto do Ipiranga - São Paulo/SP - CEP: 04276-000</a>
               </li>
               <li>
                 <a href="https://maps.app.goo.gl/FcbRg9obqNt3vQMw7" target="_blank" className="hover:text-legal-cyan">CEP: 04276-000</a>
