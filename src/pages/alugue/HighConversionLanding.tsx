@@ -5,6 +5,7 @@ import HeroSection from "@/components/landing/HeroSection";
 import LogoCarousel from "@/components/landing/LogoCarousel";
 import ProblemSolution from "@/components/landing/ProblemSolution";
 import PricingTable from "@/components/landing/PricingTable";
+import DynamicPricing from "@/components/landing/DynamicPricing";
 import TestimonialVideo from "@/components/landing/TestimonialVideo";
 import CustomerReviews from "@/components/landing/CustomerReviews";
 import HowItWorks from "@/components/landing/HowItWorks";
@@ -140,6 +141,7 @@ const HighConversionLanding = () => {
       <LogoCarousel />
       <ProblemSolution />
       <PricingTable />
+      <DynamicPricing />
       {/* <TestimonialVideo /> */}
       <CustomerReviews />
       <HowItWorks />
