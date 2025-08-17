@@ -15,7 +15,7 @@ const SuccessCasesSection = () => {
       ]
     },
     {
-      event: "Pinati Expo",
+      event: "Apas Show 2025",
       participants: "8.500",
       uptime: "99.98%",
       highlight: "Upload 400 Mbps para streaming",
