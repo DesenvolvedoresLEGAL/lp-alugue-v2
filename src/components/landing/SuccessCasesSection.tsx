@@ -3,7 +3,7 @@ import { Star, Users, Gauge, CheckCircle } from "lucide-react";
 const SuccessCasesSection = () => {
   const cases = [
     {
-      event: "NaturalTech 2024",
+      event: "Naturaltech 2025",
       participants: "12.000+",
       uptime: "100%",
       highlight: "Zero falhas durante 3 dias",
