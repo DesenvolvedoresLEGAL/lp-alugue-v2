@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon, CheckCircleIcon, Clock, MessageCircle } from "lucide-react";
 import emailjs from 'emailjs-com';
-
 const HeroSection = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -17,12 +16,11 @@ const HeroSection = () => {
   const CONTACT_EMAIL = 'sos@operadora.legal';
   const WHATSAPP_NUMBER = "5511999572394";
   const WHATSAPP_MESSAGE_GENERAL = "LEGAL, quero alugar agora.";
-  
+
   // EmailJS configuration
   const EMAILJS_SERVICE_ID = 'service_wi3kvx7';
   const EMAILJS_TEMPLATE_ID = 'template_5l2767r';
   const EMAILJS_USER_ID = 'oLw9xvmdczE218mGh';
-  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       name,
@@ -33,47 +31,33 @@ const HeroSection = () => {
       [name]: value
     }));
   };
-  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
       const data = new FormData(e.currentTarget);
       const name = data.get('nome');
       const email = data.get('email');
       const phone = data.get('celular');
       const eventName = data.get('nomeEvento');
-      
       console.log("Tracking event: lead_lp_highconv");
       console.log("Submitting form data:", formData);
-
       if (phone.toString().length > 11) {
         throw new Error("Número de telefone inválido.");
       }
-      
       const templateParams = {
         to_email: CONTACT_EMAIL,
         from_name: name,
         from_email: email,
         phone: phone,
         event_name: eventName,
-        message: `Solicitação de Reserva de Evento\n\tNome: ${name}\n\tEmail: ${email}\n\tCelular: ${phone}\n\tNome do Evento: ${eventName}`,
+        message: `Solicitação de Reserva de Evento\n\tNome: ${name}\n\tEmail: ${email}\n\tCelular: ${phone}\n\tNome do Evento: ${eventName}`
       };
-
       console.log(templateParams);
-      
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
-      );
-      
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_USER_ID);
       toast.success("Formulário enviado com sucesso! Entraremos em contato em breve.", {
         duration: 5000
       });
-      
       setFormData({
         nome: "",
         email: "",
@@ -87,51 +71,25 @@ const HeroSection = () => {
       setIsSubmitting(false);
     }
   };
-  
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE_GENERAL)}`, "_blank");
   };
-  
   return <div className="relative min-h-[90vh] flex items-center">
       {/* Optimized Background Image with high priority loading */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-10"></div>
         <picture>
-          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.webp"
-          media="(max-width: 552px)"
-          type="image/webp"
-           />
-          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.webp"
-          media="(min-width: 553px) and (max-width: 690px)"
-          type="image/webp"
-          />
-          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" 
-          media="(min-width: 691px)"
-          type="image/webp"
-          />
-          <img
-          src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp"
-          className="w-full h-full object-cover" 
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          width="1920"
-          height="1080"
-          alt="router 5G para aluguel de internet temporária em evento corporativo"     
-          />
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.webp" media="(max-width: 552px)" type="image/webp" />
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.webp" media="(min-width: 553px) and (max-width: 690px)" type="image/webp" />
+          <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" media="(min-width: 691px)" type="image/webp" />
+          <img src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" className="w-full h-full object-cover" loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" alt="router 5G para aluguel de internet temporária em evento corporativo" />
         </picture>
       </div>
 
       {/* Company Logo at the top with optimized loading */}
       <div className="absolute top-6 left-0 right-0 z-30 container-custom">
         <div className="flex justify-start">
-          <img 
-            src="./assets/Logo-Alugue-Branco.png.webp" 
-            alt="LEGAL - Internet 5G para eventos" 
-            className="h-auto max-w-[100px] md:max-w-[165px]" 
-            loading="eager"
-            decoding="async"
-          />
+          <img src="./assets/Logo-Alugue-Branco.png.webp" alt="LEGAL - Internet 5G para eventos" className="h-auto max-w-[100px] md:max-w-[165px]" loading="eager" decoding="async" />
         </div>
       </div>
 
@@ -145,7 +103,7 @@ const HeroSection = () => {
               
             </div>
             
-            <h1 className="text-3xl lg:text-5xl font-extrabold leading-snug md:leading-tight">Aluguel de Internet para Evento (5G)</h1>
+            <h1 className="text-3xl lg:text-5xl font-extrabold leading-snug md:leading-tight">Aluguel de Internet para Evento</h1>
             
             <p className="text-lg md:text-2xl font-semibold mb-4">
               Conexão dedicada, instalada em até 60 min, sem stress.
