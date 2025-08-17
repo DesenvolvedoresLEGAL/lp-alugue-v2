@@ -107,9 +107,7 @@ const HeroSection = () => {
             
             <p className="text-lg md:text-2xl font-semibold mb-4">Conexão 5G dedicada, instalada em até 60 min, sem stress.</p>
             
-            <p className="text-base md:text-lg text-white/90">
-              Velocidade 10× maior que a rede oficial do pavilhão, sem burocracia.
-            </p>
+            <p className="text-base md:text-lg text-white/90">Velocidade 10× maior que a rede oficial do pavilhão e com preço justo, que cabe no seu bolso!</p>
             
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-lg mt-8">
               <div className="flex items-center">
