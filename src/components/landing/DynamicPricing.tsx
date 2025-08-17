@@ -11,7 +11,7 @@ const DynamicPricing = () => {
 
   // Simulação de preços baseada nos fatores
   const calcularPreco = () => {
-    const precoBase = 600; // Baseado no SPEEDY 5G PRO
+    const precoBase = 390; // Baseado no SPEEDY 5G PLUS
     
     // Fator antecedência
     let fatorAntecedencia = 0;
@@ -128,7 +128,7 @@ const DynamicPricing = () => {
                 R$ {calcularPreco().toLocaleString('pt-BR')}
               </div>
               <p className="text-sm text-muted-foreground">
-                Baseado no SPEEDY 5G PRO • Valor base: R$ 600 • Antecedência: {getAntecedenciaLabel(antecedencia[0]).text} • Demanda: {getDemandaLabel(ocupacao[0]).text}
+                Baseado no SPEEDY 5G PLUS • Valor base: R$ 390 • Antecedência: {getAntecedenciaLabel(antecedencia[0]).text} • Demanda: {getDemandaLabel(ocupacao[0]).text}
               </p>
               <Button className="mt-4" size="lg">
                 Solicitar Cotação
@@ -190,7 +190,7 @@ const DynamicPricing = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <Card className="text-center border-primary/20 hover:border-primary/40 transition-all">
             <CardHeader>
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <CardTitle className="text-primary">Previsibilidade</CardTitle>
@@ -218,7 +218,7 @@ const DynamicPricing = () => {
 
           <Card className="text-center border-primary/20 hover:border-primary/40 transition-all">
             <CardHeader>
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <CardTitle className="text-primary">Transparência</CardTitle>

@@ -6,7 +6,7 @@ export const plans: Plan[] = [
   {
     id: "lite",
     name: "SPEEDY 5G LITE",
-    price: "R$ 200,00",
+    price: "SOB CONSULTA",
     features: [
       { text: "Até 3 conexões simultâneas", icon: Users },
       { text: "5GB/dia de consumo", icon: Database },
@@ -20,7 +20,7 @@ export const plans: Plan[] = [
   {
     id: "plus",
     name: "SPEEDY 5G PLUS",
-    price: "R$ 400,00",
+    price: "SOB CONSULTA",
     features: [
       { text: "Até 10 conexões simultâneas", icon: Users },
       { text: "10GB/dia de consumo", icon: Database },
@@ -34,7 +34,7 @@ export const plans: Plan[] = [
   {
     id: "pro",
     name: "SPEEDY 5G PRO",
-    price: "R$ 800,00",
+    price: "SOB CONSULTA",
     features: [
       { text: "Até 50 conexões simultâneas", icon: Users },
       { text: "50GB/dia de consumo", icon: Database },
@@ -50,7 +50,7 @@ export const plans: Plan[] = [
   {
     id: "ultra",
     name: "SPEEDY 5G ULTRA",
-    price: "R$ 2.000,00",
+    price: "SOB CONSULTA",
     features: [
       { text: "Até 100 conexões simultâneas", icon: Users },
       { text: "100GB/dia de consumo", icon: Database },
