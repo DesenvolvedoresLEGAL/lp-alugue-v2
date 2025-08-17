@@ -77,7 +77,7 @@ const PricingTable = () => {
         </div>
         
         <div className="text-center p-4 rounded-lg border border-blue-200 mt-8 bg-blue-200">
-          <p className="font-bold text-[#020cbc]">Agenda de Agosto 40% preenchida — garanta seu evento conectado antes que acabe!</p>
+          <p className="font-bold text-[#020cbc]">Agenda de Setembro 50% preenchida — garanta seu evento conectado antes que acabe!</p>
         </div>
 
         <QuoteDialog open={dialogOpen} onOpenChange={setDialogOpen} formData={formData} isSubmitting={isSubmitting} onSubmit={handleSubmit} onChange={handleChange} />
