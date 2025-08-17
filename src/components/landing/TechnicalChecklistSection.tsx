@@ -36,6 +36,11 @@ const TechnicalChecklistSection = () => {
       icon: <CheckCircle className="h-6 w-6 text-legal-cyan" />,
       title: "Homologação Prévia",
       description: "Testes completos 24h antes do evento para validar toda a infraestrutura instalada"
+    },
+    {
+      icon: <Shield className="h-6 w-6 text-legal-cyan" />,
+      title: "Contingência Ativa",
+      description: "Plano de ação imediato com equipamentos sobressalentes e rotas alternativas de conectividade"
     }
   ];
 
