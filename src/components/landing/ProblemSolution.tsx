@@ -34,6 +34,12 @@ const ProblemSolution = () => {
   return <div className="py-16 bg-gray-50">
       <div className="container-custom">
         {/* Problems Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Os grandes problemas dos eventos
+          </h2>
+        </div>
+        
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {problems.map((problem, index) => <div key={index} className="bg-white p-6 rounded-lg shadow-md border-t-4 border-legal-purple">
               <div className="h-12 w-12 bg-legal-purple/10 rounded-full flex items-center justify-center mb-4">
