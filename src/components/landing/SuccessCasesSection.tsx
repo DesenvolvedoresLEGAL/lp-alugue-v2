@@ -4,14 +4,14 @@ const SuccessCasesSection = () => {
   const cases = [
     {
       event: "Naturaltech 2025",
-      participants: "12.000+",
-      uptime: "100%",
-      highlight: "Zero falhas durante 3 dias",
-      description: "Feira de cosméticos naturais com transmissão ao vivo de palestras e demonstrações de produtos para mais de 50 mil visualizações online.",
+      participants: "20",
+      uptime: "99%",
+      highlight: "Recorde de stands atendidos numa mesma feira",
+      description: "A Naturaltech 2025 é a maior feira de negócios da América Latina dedicada exclusivamente a produtos naturais, orgânicos e sustentáveis.",
       metrics: [
-        { label: "Visitantes", value: "12.000+" },
-        { label: "Uptime", value: "100%" },
-        { label: "Largura dedicada", value: "1 Gbps" }
+        { label: "Stands conectados", value: "20" },
+        { label: "Uptime dos links", value: "99%" },
+        { label: "Dados trafegados", value: "3TB" }
       ]
     },
     {
