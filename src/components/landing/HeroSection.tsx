@@ -105,9 +105,7 @@ const HeroSection = () => {
             
             <h1 className="text-3xl lg:text-5xl font-extrabold leading-snug md:leading-tight">Aluguel de Internet para Evento</h1>
             
-            <p className="text-lg md:text-2xl font-semibold mb-4">
-              Conexão dedicada, instalada em até 60 min, sem stress.
-            </p>
+            <p className="text-lg md:text-2xl font-semibold mb-4">Conexão 5G dedicada, instalada em até 60 min, sem stress.</p>
             
             <p className="text-base md:text-lg text-white/90">
               Velocidade 10× maior que a rede oficial do pavilhão, sem burocracia.
