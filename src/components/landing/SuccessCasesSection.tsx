@@ -16,14 +16,14 @@ const SuccessCasesSection = () => {
     },
     {
       event: "Apas Show 2025",
-      participants: "8.500",
-      uptime: "99.98%",
-      highlight: "Upload 400 Mbps para streaming",
-      description: "Evento híbrido de negócios com múltiplas salas simultâneas, streaming 4K e sistema de credenciamento digital integrado.",
+      participants: "15",
+      uptime: "200 Mbps",
+      highlight: "Velocidade recorde de 200 megas dentro do Expo Center Norte em horário de pico",
+      description: "O maior evento de alimentos e bebidas das Américas e o maior festival supermercadista do mundo.",
       metrics: [
-        { label: "Upload dedicado", value: "400 Mbps" },
-        { label: "Streams simultâneos", value: "6" },
-        { label: "Credenciamentos", value: "8.500" }
+        { label: "Stands conectados", value: "15" },
+        { label: "Velocidade dedicada", value: "200 Mbps" },
+        { label: "Acessos simultâneos", value: "+500" }
       ]
     }
   ];
