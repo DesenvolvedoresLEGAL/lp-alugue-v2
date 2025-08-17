@@ -148,10 +148,10 @@ const HighConversionLanding = () => {
       <PricingTable />
       <DynamicPricing />
       <SuccessCasesSection />
+      <CustomerReviews />
       <TechnicalChecklistSection />
       <ProblemSolution />
       {/* <TestimonialVideo /> */}
-      <CustomerReviews />
       <HowItWorks />
       <GuaranteeSection />
       <FAQ />
