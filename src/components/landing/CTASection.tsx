@@ -22,10 +22,10 @@ const CTASection = () => {
       <div className="container-custom">
         <div className="text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pronto para um evento sem falhas de conexão?
+            Pronto para Wi-Fi sem falhas no seu próximo evento?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Garanta uma experiência impecável para todos os participantes do seu evento com a internet mais rápida e confiável do mercado.
+            Solicite um orçamento personalizado e garante internet 5G profissional instalada em até 60 minutos.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -33,7 +33,7 @@ const CTASection = () => {
               onClick={handleScrollToForm}
               className="bg-white hover:bg-white/90 text-legal-purple text-lg py-6 px-8 shadow-lg"
             >
-              Solicitar Cotação
+              Receber Proposta em 15 min
             </Button>
             
             <Button

@@ -3,9 +3,12 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import HeroSection from "@/components/landing/HeroSection";
 import LogoCarousel from "@/components/landing/LogoCarousel";
+import DifferentialsSection from "@/components/landing/DifferentialsSection";
 import ProblemSolution from "@/components/landing/ProblemSolution";
 import PricingTable from "@/components/landing/PricingTable";
 import DynamicPricing from "@/components/landing/DynamicPricing";
+import SuccessCasesSection from "@/components/landing/SuccessCasesSection";
+import TechnicalChecklistSection from "@/components/landing/TechnicalChecklistSection";
 import TestimonialVideo from "@/components/landing/TestimonialVideo";
 import CustomerReviews from "@/components/landing/CustomerReviews";
 import HowItWorks from "@/components/landing/HowItWorks";
@@ -111,16 +114,18 @@ const HighConversionLanding = () => {
   return (
     <>
       <Helmet>
-        <title>Aluguel de Internet 5G para Eventos | Instale em 60 min e Tenha 10× Performance</title>
-        <meta name="description" content="Conecte seu evento com 5G super-rápido. Instalação em 1 hora, suporte 24/7 e garantia LEGAL. Solicite seu orçamento agora!" />
-        <meta property="og:title" content="Aluguel de Internet 5G para Eventos | Instale em 60 min e Tenha 10× Performance" />
-        <meta property="og:description" content="Conecte seu evento com 5G super-rápido. Instalação em 1 hora, suporte 24/7 e garantia LEGAL. Solicite seu orçamento agora!" />
+        <title>Aluguel de Internet para Evento | Locação 5G Sem Burocracia – LEGAL</title>
+        <meta name="description" content="Internet 5G temporária dedicada, instalada em até 60 min, suporte 24h e 99,9% uptime. Peça orçamento agora." />
+        <link rel="canonical" href="https://alugue.operadora.legal" />
+        <meta property="og:title" content="Aluguel de Internet para Evento | Locação 5G Sem Burocracia – LEGAL" />
+        <meta property="og:description" content="Internet 5G temporária dedicada, instalada em até 60 min, suporte 24h e 99,9% uptime. Peça orçamento agora." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/placeholder.svg" /> {/* Replace with hero image */}
+        <meta property="og:url" content="https://alugue.operadora.legal" />
+        <meta property="og:image" content="https://alugue.operadora.legal/assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Aluguel de Internet 5G para Eventos | Instale em 60 min e Tenha 10× Performance" />
-        <meta property="twitter:description" content="Conecte seu evento com 5G super-rápido. Instalação em 1 hora, suporte 24/7 e garantia LEGAL. Solicite seu orçamento agora!" />
-        <meta property="twitter:image" content="/placeholder.svg" /> {/* Replace with hero image */}
+        <meta property="twitter:title" content="Aluguel de Internet para Evento | Locação 5G Sem Burocracia – LEGAL" />
+        <meta property="twitter:description" content="Internet 5G temporária dedicada, instalada em até 60 min, suporte 24h e 99,9% uptime. Peça orçamento agora." />
+        <meta property="twitter:image" content="https://alugue.operadora.legal/assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" />
         
         {/* JSON-LD Schemas */}
         <script type="application/ld+json">
@@ -139,9 +144,12 @@ const HighConversionLanding = () => {
         <HeroSection />
       </div>
       <LogoCarousel />
-      <ProblemSolution />
+      <DifferentialsSection />
       <PricingTable />
       <DynamicPricing />
+      <SuccessCasesSection />
+      <TechnicalChecklistSection />
+      <ProblemSolution />
       {/* <TestimonialVideo /> */}
       <CustomerReviews />
       <HowItWorks />

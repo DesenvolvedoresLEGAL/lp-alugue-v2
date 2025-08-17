@@ -113,8 +113,11 @@ const HeroSection = () => {
           src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp"
           className="w-full h-full object-cover" 
           loading="eager"
+          fetchPriority="high"
           decoding="async"
-          alt="Plano de fundo do Header Section"     
+          width="1920"
+          height="1080"
+          alt="router 5G para aluguel de internet temporária em evento corporativo"     
           />
         </picture>
       </div>
@@ -142,9 +145,13 @@ const HeroSection = () => {
               
             </div>
             
-            <h1 className="text-3xl lg:text-5xl font-extrabold leading-snug md:leading-tight">Internet 5G para eventos, instalada em até 60 min</h1>
+            <h1 className="text-3xl lg:text-5xl font-extrabold leading-snug md:leading-tight">Aluguel de Internet para Evento (5G)</h1>
             
-            <p className="text-lg md:text-2xl">
+            <p className="text-lg md:text-2xl font-semibold mb-4">
+              Conexão dedicada, instalada em até 60 min, sem stress.
+            </p>
+            
+            <p className="text-base md:text-lg text-white/90">
               Velocidade 10× maior que a rede oficial do pavilhão, sem burocracia.
             </p>
             

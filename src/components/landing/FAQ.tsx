@@ -9,28 +9,28 @@ import {
 const FAQ = () => {
   const faqItems = [
     {
-      question: "Qual a área de cobertura da internet 5G para eventos?",
-      answer: "Nossa solução cobre todo o território nacional, em áreas urbanas e suburbanas com cobertura 5G. Em locais sem cobertura 5G, oferecemos soluções 4.5/4G que garantem performance superior às redes convencionais."
+      question: "Quanto custa aluguel de internet para evento de 500 pessoas?",
+      answer: "O valor depende da duração e da velocidade necessária, mas nossos planos começam em R$ 1.499/dia e incluem instalação completa, equipamentos profissionais e suporte 24h. Para eventos com 500+ pessoas, recomendamos o plano SPEEDY 5G Ultra com largura dedicada."
     },
     {
-      question: "Qual o SLA de disponibilidade da rede?",
-      answer: "Garantimos SLA de 99.99% de disponibilidade durante seu evento, com redundância automática em caso de falha (para Planos SPEEDY 5G Ultra ou Live). Caso a rede fique indisponível por mais de 60 minutos seguidos, devolvemos 100% do valor investido*."
+      question: "Qual a diferença entre internet temporária e link dedicado?",
+      answer: "A internet temporária é fornecida via FWA 5G sem burocracia de licenças e pode ser instalada em até 60 minutos, ideal para eventos. O link dedicado tradicional exige contrato longo, obras e aprovações que podem levar semanas."
     },
     {
-      question: "Quais equipamentos são utilizados na instalação?",
-      answer: "Utilizamos apenas equipamentos profissionais de alta performance e atualizados periodicamente. Todos os equipamentos são de nossa propriedade e passam por manutenção preventiva regular."
+      question: "Preciso de internet para transmissão ao vivo, qual plano escolher?",
+      answer: "Para streaming ao vivo recomendamos o SPEEDY 5G Ultra ou Live, que garantem upload dedicado de 400-500 Mbps, latência ultra-baixa e redundância automática. Ideais para múltiplas transmissões simultâneas em 4K."
     },
     {
-      question: "É cobrada taxa adicional para instalação?",
-      answer: "Sim! A instalação não está incluída no valor do serviço. Também pode haver uma taxa adicional de despesas diversas (deslocamente, alimentação, hospedagem, etc) e que será informada na cotação."
+      question: "Instalação: quanto tempo leva?",
+      answer: "Nossa instalação é express: em até 60 minutos sua internet está funcionando. Fazemos site survey prévio, chegamos com equipamentos configurados e nossa equipe especializada garante ativação rápida e testes completos."
     },
     {
-      question: "Como funciona o suporte técnico durante o evento?",
-      answer: "Oferecemos suporte técnico remoto 24/7/365 por WhatsApp. Para eventos maiores, disponibilizamos um técnico presente durante todo o período. Além disso, monitoramos proativamente a rede em tempo real. Caso queira um técnico exclusivo em seu stand ou evento, a cobrança é à parte"
+      question: "Atendem fora de São Paulo?",
+      answer: "Sim! Atendemos todo o território nacional em áreas com cobertura 5G/4.5G. Para eventos fora da Grande São Paulo, pode haver taxa adicional de deslocamento que será informada no orçamento."
     },
     {
-      question: "É possível cancelar ou remarcar a data?",
-      answer: "Sim. Você pode reagendar sem custo com até 7 dias de antecedência. Para cancelamentos, devolvemos 100% do valor se feito com 15 dias de antecedência, e 50% se feito com até 7 dias de antecedência."
+      question: "Suporte 24h está incluso?",
+      answer: "Sim, suporte técnico 24/7 via WhatsApp está incluso em todos os planos. Para eventos críticos, oferecemos técnico presencial durante todo o período (consulte disponibilidade e valores)."
     }
   ];
 
@@ -53,10 +53,10 @@ const FAQ = () => {
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Perguntas Frequentes
+            FAQ sobre locação de internet temporária
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Tire suas dúvidas sobre nossa solução de internet para eventos
+            Respostas às principais dúvidas sobre aluguel de internet para eventos
           </p>
         </div>
         
