@@ -93,6 +93,7 @@ const DynamicPricing = () => {
                   min={0}
                   step={1}
                   className="w-full"
+                  aria-label="Selecionar antecedência em dias para o evento"
                 />
                 <div className="text-sm text-muted-foreground">
                   Acréscimo por urgência
@@ -114,6 +115,7 @@ const DynamicPricing = () => {
                   min={0}
                   step={5}
                   className="w-full"
+                  aria-label="Selecionar porcentagem de ocupação do evento"
                 />
                 <div className="text-sm text-muted-foreground">
                   Acréscimo por demanda
