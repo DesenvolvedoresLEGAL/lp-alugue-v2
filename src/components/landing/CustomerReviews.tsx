@@ -93,6 +93,7 @@ const CustomerReviews = () => {
                   i === currentSlide ? "bg-legal-purple" : "bg-gray-300"
                 }`}
                 onClick={() => setCurrentSlide(i)}
+                aria-label={`Ir para slide ${i + 1} de depoimentos`}
               />
             ))}
         </div>
