@@ -23,15 +23,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   
-  <!-- Preload critical logo images -->
-  <link rel="preload" as="image" href="./assets/APAS-SHOW.webp">
-  <link rel="preload" as="image" href="./assets/NATURAL-TECH.webp">
-  <link rel="preload" as="image" href="./assets/EXPOSEC.webp">
-  <link rel="preload" as="image" href="./assets/BIENAL.webp">
-
-  <!-- DNS prefetch for external resources -->
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- DNS prefetch for performance -->
   <link rel="dns-prefetch" href="//www.googletagmanager.com">
   <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//cdn.gpteng.co">
+  
+  <!-- Preload critical logo images -->
+  <link rel="preload" as="image" href="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" fetchpriority="high" imagesrcset="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.webp 552w, ./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.webp 691w, ./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp 1920w" imagesizes="100vw">
+  <link rel="preload" as="image" href="./assets/Logo-Alugue-Branco.png.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="./assets/APAS-SHOW.webp">
+  <link rel="preload" as="image" href="./assets/NATURAL-TECH.webp">
 
     <script type="application/ld+json">
   {
@@ -93,14 +97,14 @@
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
   
-  <!-- Load Analytics scripts after main content -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7LE46Z77M"></script>
+  <!-- Load Analytics scripts after main content with defer -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-S7LE46Z77M"></script>
   
-  <!-- Google Tag Manager - Fixed loading -->
+  <!-- Google Tag Manager - Optimized loading -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Ensure DOM is ready and root element exists
-      const checkRoot = () => {
+    // Defer GTM loading to improve FCP
+    window.addEventListener('load', function() {
+      setTimeout(function() {
         if (document.getElementById('root') && document.body) {
           (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -110,12 +114,8 @@
               j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
           })(window, document, 'script', 'dataLayer', 'GTM-NTC7D6R');
-        } else {
-          // Retry after a short delay if elements aren't ready
-          setTimeout(checkRoot, 100);
         }
-      };
-      checkRoot();
+      }, 100);
     });
   </script>
   
