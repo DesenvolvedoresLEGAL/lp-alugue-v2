@@ -33,33 +33,33 @@ const DynamicPricing = () => {
   };
 
   const getAntecedenciaLabel = (dias: number) => {
-    if (dias >= 30) return { text: "-10%", color: "bg-green-500" };
-    if (dias >= 21) return { text: "Base", color: "bg-blue-500" };
-    if (dias >= 10) return { text: "+10%", color: "bg-yellow-500" };
-    if (dias >= 4) return { text: "+20%", color: "bg-orange-500" };
-    return { text: "+30%", color: "bg-red-500" };
+    if (dias >= 30) return { text: "-10%", color: "bg-green-700" };
+    if (dias >= 21) return { text: "Base", color: "bg-blue-700" };
+    if (dias >= 10) return { text: "+10%", color: "bg-yellow-700" };
+    if (dias >= 4) return { text: "+20%", color: "bg-orange-700" };
+    return { text: "+30%", color: "bg-red-700" };
   };
 
   const getDemandaLabel = (ocupacao: number) => {
-    if (ocupacao < 50) return { text: "Base", color: "bg-blue-500" };
-    if (ocupacao <= 75) return { text: "+10%", color: "bg-yellow-500" };
-    if (ocupacao <= 90) return { text: "+20%", color: "bg-orange-500" };
-    return { text: "+30%", color: "bg-red-500" };
+    if (ocupacao < 50) return { text: "Base", color: "bg-blue-700" };
+    if (ocupacao <= 75) return { text: "+10%", color: "bg-yellow-700" };
+    if (ocupacao <= 90) return { text: "+20%", color: "bg-orange-700" };
+    return { text: "+30%", color: "bg-red-700" };
   };
 
   const antecedenciaData = [
-    { range: "30+ dias antes", discount: "-10%", color: "bg-green-500" },
-    { range: "21-29 dias", discount: "Base", color: "bg-blue-500" },
-    { range: "10-20 dias", discount: "+10%", color: "bg-yellow-500" },
-    { range: "4-9 dias", discount: "+20%", color: "bg-orange-500" },
-    { range: "0-3 dias", discount: "+30%", color: "bg-red-500" },
+    { range: "30+ dias antes", discount: "-10%", color: "bg-green-700" },
+    { range: "21-29 dias", discount: "Base", color: "bg-blue-700" },
+    { range: "10-20 dias", discount: "+10%", color: "bg-yellow-700" },
+    { range: "4-9 dias", discount: "+20%", color: "bg-orange-700" },
+    { range: "0-3 dias", discount: "+30%", color: "bg-red-700" },
   ];
 
   const demandaData = [
-    { range: "< 50% ocupação", surcharge: "Base", color: "bg-blue-500" },
-    { range: "50-75% ocupação", surcharge: "+10%", color: "bg-yellow-500" },
-    { range: "76-90% ocupação", surcharge: "+20%", color: "bg-orange-500" },
-    { range: "> 90% ocupação", surcharge: "+30%", color: "bg-red-500" },
+    { range: "< 50% ocupação", surcharge: "Base", color: "bg-blue-700" },
+    { range: "50-75% ocupação", surcharge: "+10%", color: "bg-yellow-700" },
+    { range: "76-90% ocupação", surcharge: "+20%", color: "bg-orange-700" },
+    { range: "> 90% ocupação", surcharge: "+30%", color: "bg-red-700" },
   ];
 
   return (
@@ -206,7 +206,7 @@ const DynamicPricing = () => {
 
           <Card className="text-center border-primary/20 hover:border-primary/40 transition-all">
             <CardHeader>
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <CardTitle className="text-primary">Disponibilidade</CardTitle>
