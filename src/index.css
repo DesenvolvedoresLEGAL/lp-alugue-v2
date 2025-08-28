@@ -44,22 +44,7 @@
     /* ... keep existing code */
   }
 
-  /* Import Neue Haas Unica font */
-  @font-face {
-    font-family: 'Neue Haas Unica';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('https://fonts.cdnfonts.com/s/30577/NeueHaasUnicaW1G-Regular.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Neue Haas Unica';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('https://fonts.cdnfonts.com/s/30577/NeueHaasUnicaW1G-Bold.woff2') format('woff2');
-  }
+  /* Use system fonts and Google Fonts instead of broken CDN fonts */
 }
 
 @layer base {

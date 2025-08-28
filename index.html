@@ -18,11 +18,10 @@
   <meta name="twitter:site" content="@lovable_dev" />
   <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-  <!-- Preload critical LCP hero background images with proper responsive handling -->
-  <link rel="preload" as="image" href="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" fetchpriority="high" imagesrcset="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.webp 552w, ./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.webp 691w, ./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp 1920w" imagesizes="100vw">
-  
-  <!-- Preload logo for immediate header visibility -->
-  <link rel="preload" as="image" href="./assets/Logo-Alugue-Branco.png.webp" fetchpriority="high">
+  <!-- Google Fonts for better performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   
   <!-- Preload critical logo images -->
   <link rel="preload" as="image" href="./assets/APAS-SHOW.webp">
@@ -97,12 +96,12 @@
   <!-- Load Analytics scripts after main content -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7LE46Z77M"></script>
   
-  <!-- Google Tag Manager - Defer loading -->
+  <!-- Google Tag Manager - Fixed loading -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Wait for the root element to be available
-      if (document.getElementById('root')) {
-        setTimeout(function() {
+      // Ensure DOM is ready and root element exists
+      const checkRoot = () => {
+        if (document.getElementById('root') && document.body) {
           (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
               'gtm.start':
@@ -111,8 +110,12 @@
               j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
           })(window, document, 'script', 'dataLayer', 'GTM-NTC7D6R');
-        }, 1000); // Defer GTM loading by 1 second
-      }
+        } else {
+          // Retry after a short delay if elements aren't ready
+          setTimeout(checkRoot, 100);
+        }
+      };
+      checkRoot();
     });
   </script>
   

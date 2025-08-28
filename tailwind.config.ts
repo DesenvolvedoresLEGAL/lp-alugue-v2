@@ -127,7 +127,7 @@ export default {
 				'carousel': 'carousel 30s linear infinite',
 			},
 			fontFamily: {
-				'neue-haas': ['Neue Haas Unica', 'sans-serif'],
+				'neue-haas': ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
 			}
 		}
 	},
