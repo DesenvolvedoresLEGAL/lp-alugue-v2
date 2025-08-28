@@ -82,7 +82,7 @@ const HeroSection = () => {
           <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-552.webp" media="(max-width: 552px)" type="image/webp" />
           <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg-691.webp" media="(min-width: 553px) and (max-width: 690px)" type="image/webp" />
           <source srcSet="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" media="(min-width: 691px)" type="image/webp" />
-          <img src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" className="w-full h-full object-cover" loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" alt="router 5G para aluguel de internet temporária em evento corporativo" />
+          <img src="./assets/lp-alugue-a-herosection-bg/lp-alugue-a-herosection-bg.webp" className="w-full h-full object-cover" loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" sizes="100vw" alt="router 5G para aluguel de internet temporária em evento corporativo" />
         </picture>
       </div>
 

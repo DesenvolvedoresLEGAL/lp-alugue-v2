@@ -40,6 +40,9 @@ const LogoCarousel = () => {
                   className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300 min-w-12" 
                   loading={client.priority ? "eager" : "lazy"}
                   decoding="async"
+                  width="80"
+                  height="80"
+                  sizes="(max-width: 768px) 80px, 80px"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                     console.log(`Failed to load logo for ${client.name}, using placeholder`);
@@ -57,6 +60,9 @@ const LogoCarousel = () => {
                   className="max-h-20 grayscale hover:grayscale-0 transition-all duration-300" 
                   loading="lazy"
                   decoding="async"
+                  width="80"
+                  height="80"
+                  sizes="(max-width: 768px) 80px, 80px"
                   onError={(e) => {
                     e.currentTarget.src = "/placeholder.svg";
                     console.log(`Failed to load logo for ${client.name}, using placeholder`);
